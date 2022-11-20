@@ -51,4 +51,8 @@
 a {
   text-decoration: underline;
 }
+
+a:hover {
+  color: #1f94cf;
+}
 </style>

@@ -1,6 +1,10 @@
 vue<template>
-    <div class="contact-container">
-      <h1 class="">Contact me</h1>
+    <div class="contact-container m-[2rem]">
+      <h2 class="m-[2rem] text-lg font-bold">Contact me</h2>
+      <p class="m-[1rem]">Please do not hesitate to contact me if you would like to work with me!</p>
+      <div>Feel free to contact me at this email:</div>
+      <p>nenadpredan@gmail.com</p>
+      <img src="../assets/images/contact_phone_green.jpg" alt="">
     </div>
   </template>
   
@@ -20,6 +24,14 @@ vue<template>
     text-align: center;
     padding: 0.5rem;
     width: 50%;
+    background-image: url(../assets/images/background_contact.jpg);
+    background-position: 70% 50%;
+  }
+
+  img {
+    border-radius: .5rem;
+    width: 50%;
+    margin: 2rem;
   }
   </style>
   

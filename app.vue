@@ -1,7 +1,7 @@
 <template>
   <div class="main-container">
     <nav class="top-header">
-      <h2 class="header">Hi, I'm Neno</h2>
+      <h2 class="header title-header">Hi, I'm Neno</h2>
       <h2 class="w-[30%]"></h2>
       <h2 class="header home" @click="FocusToElement">Home</h2>
       <h2 class="header about" @click="FocusToElement">About Neno</h2>
@@ -21,39 +21,47 @@
 <script setup>
 function FocusToElement(e) {
   let element = e.target;
+  let headerHeight = document.querySelector(".top-header").offsetHeight;
+  let toFocusElement = false;
   if (element.classList.contains("home")) {
-    document
-      .querySelector(".home-container")
-      .scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+    toFocusElement = "home-container";
   } else if (element.classList.contains("about")) {
-    document.querySelector(".about-container").scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-      inline: "nearest",
-    });
+    toFocusElement = "about-container";
   } else if (element.classList.contains("projects")) {
-    document.querySelector(".projects-container").scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-      inline: "nearest",
-    });
+    toFocusElement = "projects-container";
   } else if (element.classList.contains("contact")) {
-    document.querySelector(".contact-container").scrollIntoView({
+    toFocusElement = "contact-container";
+  }
+  if(toFocusElement) {
+    let Targetelement = document.querySelector(`.${toFocusElement}`);
+    let headerOffset = headerHeight + 10;
+    let elementPosition = Targetelement.getBoundingClientRect().top;
+    let offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+    window.scrollTo({
+      top: offsetPosition,
       behavior: "smooth",
-      block: "start",
-      inline: "nearest",
     });
   }
 }
 
 function isInViewport(el) {
-  const rect = el.getBoundingClientRect();
+  let top = el.offsetTop;
+  let left = el.offsetLeft;
+  let width = el.offsetWidth;
+  let height = el.offsetHeight;
+
+  while(el.offsetParent) {
+    el = el.offsetParent;
+    top += el.offsetTop;
+    left += el.offsetLeft;
+  }
+
   return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <=
-      (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    top < (window.pageYOffset + window.innerHeight) &&
+    left < (window.pageXOffset + window.innerWidth) &&
+    (top + height - 400) > window.pageYOffset &&
+    (left + width) > window.pageXOffset
   );
 }
 
@@ -65,13 +73,13 @@ function setNavStyleIfInViewport() {
   if (isInViewport(document.querySelector(".home-container"))) {
     document.querySelector(".home").classList.add("in-view");
   }
-  if (isInViewport(document.querySelector(".about-container"))) {
+  else if (isInViewport(document.querySelector(".about-container"))) {
     document.querySelector(".about").classList.add("in-view");
   }
-  if (isInViewport(document.querySelector(".projects-container"))) {
+  else if (isInViewport(document.querySelector(".projects-container"))) {
     document.querySelector(".projects").classList.add("in-view");
   }
-  if (isInViewport(document.querySelector(".projects-container"))) {
+  else {
     document.querySelector(".contact").classList.add("in-view");
   }
 }
@@ -87,6 +95,28 @@ if (process.client) {
 </script>
 
 <style>
+/* width */
+::-webkit-scrollbar {
+  background: #0b1317;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 0.5rem;
+  background: #0b1317;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #1f94cf;
+  border-radius: 0.5rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #88d523;
+}
 .main-container {
   display: flex;
   flex-direction: column;
@@ -111,9 +141,9 @@ if (process.client) {
     to bottom,
     transparent,
     #0b1317 0%,
-    #0b1317 50%,
-    #0b1317f3 70%,
-    #0b131772 100%
+    #0b1317f3 40%,
+    #0b131788 80%,
+    #0b131700 100%
   );
   border-bottom: 0.02rem solid #3f4a55;
   flex-wrap: wrap;
@@ -146,6 +176,10 @@ if (process.client) {
   margin: 0.4rem;
   margin-top: 0.25rem;
   margin-bottom: 0.25rem;
+}
+
+.title-header {
+  border-bottom: #8bdf25 solid 0.5rem;
 }
 
 .in-view {

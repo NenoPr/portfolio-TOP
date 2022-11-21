@@ -1,0 +1,95 @@
+.separator {
+  width: 50%;
+  height: 1rem;
+  background: #1f94cf00;
+  border-top: 0.5rem dotted #0a9ae7;
+  margin-top: 1rem;
+  align-self: center;
+}
+
+img {
+    border-radius: 0.5rem;
+  }
+  
+  .projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .project-holder {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-top: 0.1rem solid #0a9ae7;
+    border-bottom: 0.1rem solid #0a9ae7;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 0.5rem;
+  }
+  
+  .project-details-name {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
+  .project-details-description {
+    text-align: left;
+    width: 70%;
+    align-self: center;
+  }
+  
+  .project-details-tool-header {
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  
+  .project-details-tools-holder {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .project-details-tool {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 4fr;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .project-details-tool-name {
+    font-weight: bold;
+  }
+  
+  .project-details-logo {
+    grid-column: 1 / 1;
+    grid-row: 2 / 3;
+    display: grid;
+    align-items: center;
+    width: 5rem;
+    background-color: rgb(101, 108, 130);
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+  }
+  
+  .tryit-link {
+    font-weight: bold;
+    font-size: 1.5rem;
+    width: fit-content;
+    align-self: center;
+  }
+  
+  .project-details-image {
+    width: 90%;
+    align-self: center;
+  }
+  
+  a {
+    text-decoration: underline;
+  }
+  
+  a:hover {
+    color: #1f94cf;
+  }

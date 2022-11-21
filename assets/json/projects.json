@@ -1,0 +1,172 @@
+{
+    "memoryGame": {
+        "title": "Memory Game",
+        "desc": "A memory based game where the goal is to click every unique image once. Clicking the same image twice will reset the game score and the game will reset. Clicking every unique image in succesion will result in a Win!",
+        "tools": [
+            {
+                "tool": "HTML",
+                "image": "html-5-logo.png"
+            },
+            {
+                "tool": "CSS",
+                "image": "CSS3_logo.png"
+            },
+            {
+                "tool": "JavaScript",
+                "image": "JavaScript_logo.png"
+            },
+            {
+                "tool": "React",
+                "image": "React-logo.png"
+            }
+        ],
+        "webLink": "https://nenopr.github.io/memory-card-OdinProject/",
+        "image": "Memory Game 1080p.png"
+    },
+    "ecommerceStore": {
+        "title": "Small E-commerce Store",
+        "desc": "A small fan based shop of a popular video game. The website features multiple products and categories, along with sizes, colors, quantity and reviews for each product. The website also has a cart feature with a checkout functionality, along with some smaller features.",
+        "tools": [
+            {
+                "tool": "HTML",
+                "image": "html-5-logo.png"
+            },
+            {
+                "tool": "CSS",
+                "image": "CSS3_logo.png"
+            },
+            {
+                "tool": "JavaScript",
+                "image": "JavaScript_logo.png"
+            },
+            {
+                "tool": "React",
+                "image": "React-logo.png"
+            }
+        ],
+        "webLink": "https://nenopr.github.io/shopping-cart-OdinProject/#/",
+        "image": "ecomerce_frontpage.png"
+    },
+    "battleshipsGame": {
+        "title": "Battleships game",
+        "desc": "The classic Battleship Game where the victory objective is to sink your enemy ships before thy sink yours, while taking turns to take your shots. Rotate and place your own ships on the board and keep firing until you discover hidden enemy ships and sink them all.",
+        "tools": [
+            {
+                "tool": "HTML",
+                "image": "html-5-logo.png"
+            },
+            {
+                "tool": "CSS",
+                "image": "CSS3_logo.png"
+            },
+            {
+                "tool": "JavaScript",
+                "image": "JavaScript_logo.png"
+            }
+        ],
+        "webLink": "https://nenopr.github.io/battleship-TheOdinProject/",
+        "image": "battleship_game.png"
+    },
+    "imageTaggingGame": {
+        "title": "Image Tagging Game",
+        "desc": "A game where the goal is to find the right given characters in an image filled with various characters. Find them as fast as possible and submit your sore to the global leaderboards.",
+        "tools": [
+            {
+                "tool": "HTML",
+                "image": "html-5-logo.png"
+            },
+            {
+                "tool": "CSS",
+                "image": "CSS3_logo.png"
+            },
+            {
+                "tool": "JavaScript",
+                "image": "JavaScript_logo.png"
+            },
+            {
+                "tool": "React",
+                "image": "React-logo.png"
+            },
+            {
+                "tool": "Firebase",
+                "image": "firebase-logo.png"
+            }
+        ],
+        "webLink": "https://nenopr.github.io/find-me-image-tagging-game/",
+        "image": "imagetagging_game.png"
+    },
+    "cvMaker": {
+        "title": "CV Maker",
+        "desc": "Custom CV Maker where you can add your work experience, education, skills, photo ect. After filling your CV export it in a pdf file or print it.",
+        "tools": [
+            {
+                "tool": "HTML",
+                "image": "html-5-logo.png"
+            },
+            {
+                "tool": "CSS",
+                "image": "CSS3_logo.png"
+            },
+            {
+                "tool": "JavaScript",
+                "image": "JavaScript_logo.png"
+            },
+            {
+                "tool": "React",
+                "image": "React-logo.png"
+            }
+        ],
+        "webLink": "https://nenopr.github.io/cv-project-TheOdinProject/",
+        "image": "CV_maker.png"
+    },
+    "ticTacToeGame": {
+        "title": "Tic-Tac-Toe Game",
+        "desc": "A basic Tic-Tac-Toe game. Align three of your markers first and win the game.",
+        "tools": [
+            {
+                "tool": "HTML",
+                "image": "html-5-logo.png"
+            },
+            {
+                "tool": "CSS",
+                "image": "CSS3_logo.png"
+            },
+            {
+                "tool": "JavaScript",
+                "image": "JavaScript_logo.png"
+            }
+        ],
+        "webLink": "https://nenopr.github.io/tic-tac-toe-project-The-Odin-Project/",
+        "image": "tictactoe_game.png"
+    },
+    "responsiveWebsite": {
+        "title": "Responsive Website",
+        "desc": "A website with a responsive design, marketing disenfection robots. Accessing /user in the url bar leads to a small demo of the dummyapi, listing all the available users with diffrent UI designs and gives user details in dynamic routes for pages.",
+        "tools": [
+            {
+                "tool": "HTML",
+                "image": "html-5-logo.png"
+            },
+            {
+                "tool": "CSS",
+                "image": "CSS3_logo.png"
+            },
+            {
+                "tool": "JavaScript",
+                "image": "JavaScript_logo.png"
+            }
+            ,
+            {
+                "tool": "Vue",
+                "image": "Vue_Logo.png"
+            }
+            ,
+            {
+                "tool": "Nuxt3",
+                "image": "nuxt3-logo.png"
+            }
+        ],
+        "webLink": "https://lloyds-verdas-frontend-assigment.vercel.app/en",
+        "image": "lloyds-verdas.png"
+    }
+}

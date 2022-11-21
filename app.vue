@@ -117,6 +117,12 @@ if (process.client) {
 ::-webkit-scrollbar-thumb:hover {
   background: #88d523;
 }
+
+:root {
+  font-family: 'Roboto', sans-serif;
+}
+
+
 .main-container {
   display: flex;
   flex-direction: column;

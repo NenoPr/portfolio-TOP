@@ -1,7 +1,7 @@
 <template>
   <div class="about-container">
+    <h2 class="about-header">About Neno</h2>
     <div class="about-info">
-      <h1 class="about-header">About Neno</h1>
       <img src="~/assets/images/profile_image.jpg" class="profile-image" />
       <p class="profile-desc">
         I dabble in programming mostly as to keep the deterioration of my
@@ -10,9 +10,9 @@
         fear, porn, loneliness, sadness, neglect.
       </p>
     </div>
-    <div>
+    <div class="about-tools-holder">
       <div class="about-tools-header">
-        Some technologies I have worked with:
+        Some technologies I have worked with
       </div>
       <div class="about-tools">
         <div class="about-tool-holder">
@@ -103,7 +103,7 @@
 .about-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
+  grid-template-rows: auto 1fr;
   gap: 2rem;
   align-items: center;
   border: 0.1rem solid rgb(199, 114, 114);
@@ -111,22 +111,22 @@
   border-top: rgb(199, 114, 114) solid 0.5rem;
   text-align: center;
   padding: 0.5rem;
-  padding-top: 3rem;
   width: 50%;
 }
 
 .about-header {
-  position: relative;
-  left: 50%;
-  bottom: 3rem;
+  grid-row: 1;
+  grid-column: 1 / 3;
   font-weight: bold;
-  font-size: larger;
+  font-size: 2rem;
 }
 
 .about-info {
+  grid-row: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
+  align-self: flex-start;
   gap: 2rem;
 }
 
@@ -143,20 +143,23 @@
   width: 90%;
 }
 
+.about-tools-holder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .about-tools-header {
-  position: relative;
   font-weight: bold;
+  font-size: 1.05rem;
   margin-bottom: 1rem;
-  margin-top: 1rem;
 }
 
 .about-tools {
+  grid-row: 2;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: auto;
-  justify-content: center;
-  align-content: center;
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(5em, 1fr));
+  grid-gap: 1rem;
   padding: 1rem;
 }
 
@@ -164,14 +167,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #656c82;
+  font-weight: bold;
+  background-color: #111b3d;
   border-radius: 0.25rem;
   padding: 0.5rem;
   gap: 0.5rem;
-  width: 5rem;
 }
 
 .about-tool-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
+  flex-basis: 90%;
 }
 </style>

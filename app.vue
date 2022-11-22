@@ -1,13 +1,32 @@
 <template>
   <div class="main-container">
     <nav class="top-header">
-      <h2 class="header title-header">Hi, I'm Neno</h2>
-      <h2 class="w-[30%]"></h2>
-      <h2 class="header home" @click="FocusToElement">Home</h2>
-      <h2 class="header about" @click="FocusToElement">About Neno</h2>
-      <h2 class="header projects" @click="FocusToElement">Projects</h2>
-      <h2 class="header contact" @click="FocusToElement">Contact</h2>
+      <div class="top-header-nav">
+        <h2 class="header title-header">Hi, I'm Neno</h2>
+        <h2 class="w-[30%]"></h2>
+        <h2 class="header home" @click="FocusToElement">Home</h2>
+        <h2 class="header about" @click="FocusToElement">About Neno</h2>
+        <h2
+          class="header projects projects-hover"
+          @click="FocusToElement"
+          @mouseenter="showProjectsNavBar"
+        >
+          Projects
+        </h2>
+        <h2 class="header contact" @click="FocusToElement">Contact</h2>
+      </div>
       <!-- <div class="opacity-header"></div> -->
+      <div class="top-header-projects-selection">
+        <template v-for="project in projects">
+          <div
+            class="projects-selection-project"
+            :class="project.titleClass + '-header'"
+            @click="FocusToProject"
+          >
+            {{ project.title }}
+          </div>
+        </template>
+      </div>
     </nav>
     <Home />
     <About />
@@ -19,6 +38,7 @@
 </template>
 
 <script setup>
+import projects from "~/assets/json/projects.json";
 function FocusToElement(e) {
   let element = e.target;
   let headerHeight = document.querySelector(".top-header").offsetHeight;
@@ -32,10 +52,36 @@ function FocusToElement(e) {
   } else if (element.classList.contains("contact")) {
     toFocusElement = "contact-container";
   }
-  if(toFocusElement) {
-    let Targetelement = document.querySelector(`.${toFocusElement}`);
+
+  if (toFocusElement) {
+    let TargetedElement = document.querySelector(`.${toFocusElement}`);
     let headerOffset = headerHeight + 10;
-    let elementPosition = Targetelement.getBoundingClientRect().top;
+    let elementPosition = TargetedElement.getBoundingClientRect().top;
+    let offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth",
+    });
+  }
+}
+
+function FocusToProject(e) {
+  let element = e.target;
+  let headerHeight = document.querySelector(".top-header").offsetHeight;
+  let toFocusElement = false;
+  for (const project in projects) {
+    if (element.classList.contains(`${projects[project].titleClass}-header`)) {
+      toFocusElement = projects[project].titleClass;
+      console.log("toFocusElement", toFocusElement);
+      break;
+    }
+  }
+  if (toFocusElement) {
+    let TargetedElement = document.querySelector(`.${toFocusElement}`);
+    console.log(TargetedElement);
+    let headerOffset = headerHeight + 10;
+    let elementPosition = TargetedElement.getBoundingClientRect().top;
     let offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
     window.scrollTo({
@@ -51,17 +97,17 @@ function isInViewport(el) {
   let width = el.offsetWidth;
   let height = el.offsetHeight;
 
-  while(el.offsetParent) {
+  while (el.offsetParent) {
     el = el.offsetParent;
     top += el.offsetTop;
     left += el.offsetLeft;
   }
 
   return (
-    top < (window.pageYOffset + window.innerHeight) &&
-    left < (window.pageXOffset + window.innerWidth) &&
-    (top + height - 400) > window.pageYOffset &&
-    (left + width) > window.pageXOffset
+    top < window.pageYOffset + window.innerHeight &&
+    left < window.pageXOffset + window.innerWidth &&
+    top + height - 400 > window.pageYOffset &&
+    left + width > window.pageXOffset
   );
 }
 
@@ -70,28 +116,85 @@ function setNavStyleIfInViewport() {
   document.querySelector(".about").classList.remove("in-view");
   document.querySelector(".projects").classList.remove("in-view");
   document.querySelector(".contact").classList.remove("in-view");
+
   if (isInViewport(document.querySelector(".home-container"))) {
     document.querySelector(".home").classList.add("in-view");
-  }
-  else if (isInViewport(document.querySelector(".about-container"))) {
+  } else if (isInViewport(document.querySelector(".about-container"))) {
     document.querySelector(".about").classList.add("in-view");
-  }
-  else if (isInViewport(document.querySelector(".projects-container"))) {
+  } else if (isInViewport(document.querySelector(".projects-container"))) {
     document.querySelector(".projects").classList.add("in-view");
-  }
-  else {
+    isProjectInView();
+    if (
+      document
+        .querySelector(".top-header-projects-selection")
+        .classList.contains("show-top-header-projects-selection")
+    ) {
+      return;
+    } else {
+      document
+        .querySelector(".top-header-projects-selection")
+        .classList.add("show-top-header-projects-selection");
+    }
+    return;
+  } else {
     document.querySelector(".contact").classList.add("in-view");
   }
-}
-onMounted(() => {
-  setNavStyleIfInViewport();
-});
 
-if (process.client) {
-  document.addEventListener("scroll", setNavStyleIfInViewport, {
+  document
+    .querySelector(".top-header-projects-selection")
+    .classList.remove("show-top-header-projects-selection");
+}
+
+function isProjectInView() {
+  document.querySelectorAll(".projects-selection-project").forEach((node) => {
+    node.classList.remove("in-view");
+  });
+  for (const project in projects) {
+    // console.log(`${projects[project].titleClass}-header`);
+    if (
+      isInViewport(document.querySelector(`.${projects[project].titleClass}`))
+    ) {
+      document
+        .querySelector(`.${projects[project].titleClass}-header`)
+        .classList.add("in-view");
+      break;
+    }
+  }
+  return;
+}
+
+function showProjectsNavBar() {
+  document
+    .querySelector(".top-header-projects-selection")
+    .classList.add("show-top-header-projects-selection-hover");
+  console.log(document.querySelector(".top-header-projects-selection-hover"));
+}
+
+function closeProjectsNavBar() {
+  document
+    .querySelector(".top-header-projects-selection")
+    .classList.remove("show-top-header-projects-selection-hover");
+  console.log(document.querySelector(".top-header-projects-selection-hover"));
+}
+
+onMounted(() => {
+  window.addEventListener("scroll", setNavStyleIfInViewport, {
     passive: true,
   });
-}
+  document.querySelectorAll(".header").forEach((node) => {
+    if (!node.classList.contains("projects")) {
+      node.addEventListener("mouseenter", closeProjectsNavBar, {
+        passive: true,
+      });
+    }
+  });
+  setNavStyleIfInViewport();
+  document
+    .querySelector(".top-header")
+    .addEventListener("mouseleave", closeProjectsNavBar, {
+      passive: true,
+    });
+});
 </script>
 
 <style>
@@ -119,9 +222,8 @@ if (process.client) {
 }
 
 :root {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
-
 
 .main-container {
   display: flex;
@@ -131,12 +233,14 @@ if (process.client) {
   min-height: 100vh;
   background-color: #0b1317;
   color: white;
+  font-family: "Roboto", sans-serif;
 }
 
 .top-header {
-  display: flex;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-template-columns: 1fr;
   justify-content: center;
-  gap: 1rem;
   width: 100%;
   padding: 1rem;
   position: sticky;
@@ -153,6 +257,58 @@ if (process.client) {
   );
   border-bottom: 0.02rem solid #3f4a55;
   flex-wrap: wrap;
+}
+
+.top-header-nav {
+  grid-row: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.top-header-projects-selection {
+  display: flex;
+  justify-content: center;
+  grid-row: 2;
+  position: relative;
+  top: 0px;
+  gap: 1rem;
+  margin-top: 0;
+  font-weight: bold;
+  opacity: 0;
+  height: 0px;
+  cursor: pointer;
+  transition: height 0.4s ease-out, opacity 0.2s ease-out,
+    margin-top 0.4s ease-out;
+  font-size: 1rem;
+  overflow: hidden;
+}
+
+.show-top-header-projects-selection-hover {
+  height: calc(2.2em);
+  opacity: 1;
+  margin-top: 1rem;
+}
+
+.show-top-header-projects-selection {
+  height: calc(2.2em);
+  opacity: 1;
+  margin-top: 1rem;
+}
+
+.projects-selection-project {
+  border: 0.1rem solid #a5e05d00;
+  border-bottom: #a5e05d00 solid 0.5rem;
+  border-radius: 0.5rem;
+  padding-top: 0.1rem;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  cursor: pointer;
+  overflow: hidden;
+  /* background-color: #141518; */
+}
+
+.projects-selection-project:hover {
+  border-color: #5daee0;
 }
 
 .header {

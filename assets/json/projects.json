@@ -1,6 +1,7 @@
 {
     "memoryGame": {
         "title": "Memory Game",
+        "titleClass": "memory-game",
         "desc": "A memory based game where the goal is to click every unique image once. Clicking the same image twice will reset the game score and the game will reset. Clicking every unique image in succesion will result in a Win!",
         "tools": [
             {
@@ -25,6 +26,7 @@
     },
     "ecommerceStore": {
         "title": "Small E-commerce Store",
+        "titleClass": "e-commerce-store",
         "desc": "A small fan based shop of a popular video game. The website features multiple products and categories, along with sizes, colors, quantity and reviews for each product. The website also has a cart feature with a checkout functionality, along with some smaller features.",
         "tools": [
             {
@@ -49,6 +51,7 @@
     },
     "battleshipsGame": {
         "title": "Battleships game",
+        "titleClass": "battleships-game",
         "desc": "The classic Battleship Game where the victory objective is to sink your enemy ships before thy sink yours, while taking turns to take your shots. Rotate and place your own ships on the board and keep firing until you discover hidden enemy ships and sink them all.",
         "tools": [
             {
@@ -69,6 +72,7 @@
     },
     "imageTaggingGame": {
         "title": "Image Tagging Game",
+        "titleClass": "image-tagging-game",
         "desc": "A game where the goal is to find the right given characters in an image filled with various characters. Find them as fast as possible and submit your sore to the global leaderboards.",
         "tools": [
             {
@@ -97,6 +101,7 @@
     },
     "cvMaker": {
         "title": "CV Maker",
+        "titleClass": "cv-maker",
         "desc": "Custom CV Maker where you can add your work experience, education, skills, photo ect. After filling your CV export it in a pdf file or print it.",
         "tools": [
             {
@@ -121,6 +126,7 @@
     },
     "ticTacToeGame": {
         "title": "Tic-Tac-Toe Game",
+        "titleClass": "tic-tac-toe-game",
         "desc": "A basic Tic-Tac-Toe game. Align three of your markers first and win the game.",
         "tools": [
             {
@@ -141,6 +147,7 @@
     },
     "responsiveWebsite": {
         "title": "Responsive Website",
+        "titleClass": "responsive-website",
         "desc": "A website with a responsive design, marketing disenfection robots. Accessing /user in the url bar leads to a small demo of the dummyapi, listing all the available users with diffrent UI designs and gives user details in dynamic routes for pages.",
         "tools": [
             {

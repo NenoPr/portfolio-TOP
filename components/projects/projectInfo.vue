@@ -1,7 +1,7 @@
 <template>
-  <template v-for="project in projects">
-    <div class="project-holder">
-      <div class="project-details-name">{{ project.title, key }}</div>
+  <template v-for="project in projects" :key="project.titleClass">
+    <div class="project-holder" :class="project.titleClass">
+      <div class="project-details-name">{{ project.title}}</div>
       <p class="project-details-description">
         {{ project.desc }}
       </p>

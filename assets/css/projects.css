@@ -28,6 +28,20 @@ img {
   border-radius: 0.5rem;
 }
 
+.project-details-holder {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.project-info-holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
 .project-details-name {
   font-weight: bold;
   font-size: 1.5rem;
@@ -35,8 +49,14 @@ img {
 
 .project-details-description {
   text-align: left;
-  width: 70%;
   align-self: center;
+}
+
+.project-tools-holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .project-details-tool-header {
@@ -45,9 +65,13 @@ img {
 }
 
 .project-details-tools-holder {
+  /* display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(5em, 1fr)); */
   display: flex;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+  justify-items: center;
   justify-content: center;
-  gap: 1rem;
 }
 
 .project-details-tool {
@@ -57,6 +81,8 @@ img {
   flex-direction: column;
   justify-content: center;
   gap: 0.5rem;
+  margin-left: .5rem;
+  margin-right: .5rem;
 }
 
 .project-details-tool-name {
@@ -68,28 +94,65 @@ img {
   grid-row: 2 / 3;
   display: grid;
   align-items: center;
-  width: 5rem;
+  max-width: 5rem;
   background-color: rgb(58, 89, 126);
   padding: 0.5rem;
   border-radius: 0.25rem;
 }
 
 .tryit-link {
+  background-image: linear-gradient(
+    45deg,
+    rgb(203, 68, 68),
+    rgb(203, 162, 68),
+    rgb(45, 139, 222)
+  );
+  padding: 0.5rem;
+  border: 0.1rem solid white;
+  border-radius: 0.5rem;
   font-weight: bold;
   font-size: 1.5rem;
   width: fit-content;
   align-self: center;
+  background-size: 300%;
+  background-color: #0a9ae7;
+  animation: linkColorChange 3s infinite alternate;
+  transition: transform .25s;
+}
+
+.tryit-link:hover {
+  transform: scale(1.05);
+}
+
+.tryit-link:active {
+  transform: scale(0.95);
+}
+
+@keyframes linkColorChange {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+.project-images-holder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
 }
 
 .project-details-image {
-  width: 90%;
+  width: 50em;
   align-self: center;
+  cursor: zoom-in;
+  transition: transform .5s;
 }
 
-a {
-  text-decoration: underline;
-}
-
-a:hover {
-  color: #1f94cf;
+.project-details-image-zoom-in {
+  cursor: zoom-out;
+  transform: scale(1.75);
 }

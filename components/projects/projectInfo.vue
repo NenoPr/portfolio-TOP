@@ -1,20 +1,30 @@
 <template>
   <template v-for="project in projects" :key="project.titleClass">
     <div class="project-holder" :class="project.titleClass">
-      <div class="project-details-name">{{ project.title}}</div>
-      <p class="project-details-description">
-        {{ project.desc }}
-      </p>
-      <p class="project-details-tool-header">Tools Used</p>
-      <div class="project-details-tools-holder">
-        <template v-for="item in project.tools" :key="item.tool">
-          <div class="project-details-tool">
-            <div class="project-details-tool-name">{{item.tool}}</div>
-            <div class="project-details-logo">
-              <img v-bind:src="'_nuxt/assets/images/' + item.image" :alt="item.tool" />
-            </div>
+      <div class="project-details-name">{{ project.title }}</div>
+      <div class="project-details-holder">
+        <div class="project-info-holder">
+          <div class="font-bold text-xl">Description:</div>
+          <p class="project-details-description">
+            {{ project.desc }}
+          </p>
+        </div>
+        <div class="project-tools-holder">
+          <p class="project-details-tool-header">Tools Used</p>
+          <div class="project-details-tools-holder">
+            <template v-for="item in project.tools" :key="item.tool">
+              <div class="project-details-tool">
+                <div class="project-details-tool-name">{{ item.tool }}</div>
+                <div class="project-details-logo">
+                  <img
+                    v-bind:src="'_nuxt/assets/images/' + item.image"
+                    :alt="item.tool"
+                  />
+                </div>
+              </div>
+            </template>
           </div>
-        </template>
+        </div>
       </div>
       <a
         :href="`${project.webLink}`"
@@ -23,11 +33,28 @@
         class="tryit-link"
         >Try it Out</a
       >
-      <img
-        v-bind:src="'_nuxt/assets/images/'+ project.image"
-        class="project-details-image"
-        alt=""
-      />
+      <div class="project-images-holder">
+        <img
+          v-bind:src="'_nuxt/assets/images/' + project.image"
+          class="project-details-image"
+          alt=""
+        />
+        <!-- <img
+          v-bind:src="'_nuxt/assets/images/' + project.image"
+          class="project-details-image"
+          alt=""
+        /> -->
+        <!-- <img
+          v-bind:src="'_nuxt/assets/images/' + project.image"
+          class="project-details-image"
+          alt=""
+        />
+        <img
+          v-bind:src="'_nuxt/assets/images/' + project.image"
+          class="project-details-image"
+          alt=""
+        /> -->
+      </div>
     </div>
     <div class="separator"></div>
   </template>
@@ -36,8 +63,28 @@
 <script setup>
 import projects from "~/assets/json/projects.json";
 
+function toggleZoom(e) {
+  if (!e.target.classList.contains("project-details-image-zoom-in")) {
+    window.addEventListener("click", removeZoomDocument);
+    setTimeout(() => {
+      e.target.classList.add("project-details-image-zoom-in");
+    }, "100");
+  }
+}
+function removeZoomDocument() {
+  document.querySelectorAll(".project-details-image").forEach((node) => {
+    if (node.classList.contains("project-details-image-zoom-in")) {
+      node.classList.remove("project-details-image-zoom-in");
+      window.removeEventListener("click", removeZoomDocument);
+    }
+  });
+}
 
-console.log(projects);
+onMounted(() => {
+  document.querySelectorAll(".project-details-image").forEach((node) => {
+    node.addEventListener("click", toggleZoom);
+  });
+});
 </script>
 
 <style lang="scss" scoped>

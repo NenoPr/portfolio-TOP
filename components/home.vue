@@ -30,12 +30,18 @@
   border: 0.1rem solid var(--color-two);
   border-radius: 0.5rem;
   border-top: var(--color-two) solid 0.5rem;
-  width: 50%;
+  width: 100%;
   text-align: center;
   padding: 0.5rem;
   background-image: url(../assets/images/background_thread_ball.jpg);
   background-repeat: repeat-y;
   background-size: cover;
+}
+
+@media (max-width: 1280px) {
+  .home-container {
+    width: 100%;
+  }
 }
 
 .nuxt-link {

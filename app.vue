@@ -257,6 +257,7 @@ onMounted(() => {
   );
   border-bottom: 0.02rem solid #3f4a55;
   flex-wrap: wrap;
+  z-index: 99;
 }
 
 .top-header-nav {
@@ -276,7 +277,6 @@ onMounted(() => {
   font-weight: bold;
   opacity: 0;
   height: 0px;
-  cursor: pointer;
   transition: height 0.4s ease-out, opacity 0.2s ease-out,
     margin-top 0.4s ease-out;
   font-size: 1rem;

@@ -52,7 +52,7 @@
     "battleshipsGame": {
         "title": "Battleships game",
         "titleClass": "battleships-game",
-        "desc": "The classic Battleship Game where the victory objective is to sink your enemy ships before thy sink yours, while taking turns to take your shots. Rotate and place your own ships on the board and keep firing until you discover hidden enemy ships and sink them all.",
+        "desc": "The classic Battleship Game where the victory objective is to sink your enemy ships before they sink yours, while taking turns to take your shots. Rotate and place your own ships on the board and keep firing until you discover hidden enemy ships and sink them all.",
         "tools": [
             {
                 "tool": "HTML",

@@ -51,6 +51,13 @@
         </div>
         <!-- GAP -->
         <div class="about-tool-holder">
+          <div>Vue</div>
+          <div class="about-tool-image">
+            <img src="../assets/images/logos/Vue_Logo.png" alt="" />
+          </div>
+        </div>
+        <!-- GAP -->
+        <div class="about-tool-holder">
           <div>Nuxt</div>
           <div class="about-tool-image">
             <img src="../assets/images/logos/nuxt-icon.svg" alt="" />
@@ -111,7 +118,7 @@
   border-top: rgb(199, 114, 114) solid 0.5rem;
   text-align: center;
   padding: 0.5rem;
-  width: 50%;
+  width: 70%;
 }
 
 .about-header {
@@ -157,8 +164,12 @@
 
 .about-tools {
   grid-row: 2;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(5em, 1fr));
+  /* display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(5em, 100px)); */
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: center;
+  justify-content: center;
   grid-gap: 1rem;
   padding: 1rem;
 }
@@ -180,5 +191,6 @@
   align-items: center;
   width: 100%;
   flex-basis: 90%;
+  max-width: 5rem;
 }
 </style>

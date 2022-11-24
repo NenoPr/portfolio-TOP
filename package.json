@@ -3,6 +3,7 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
@@ -11,6 +12,7 @@
     "autoprefixer": "^10.4.13",
     "nuxt": "3.0.0",
     "postcss": "^8.4.19",
+    "push-dir": "^0.4.1",
     "tailwindcss": "^3.2.4"
   },
   "dependencies": {

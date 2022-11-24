@@ -8,6 +8,6 @@ export default defineNuxtConfig({
     },
   },
   app: {
-    baseURL: '/portfolio-TOP/'
+    baseURL: ''
   }
 });

@@ -7,8 +7,7 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  target: 'static',
-  router: {
-    base: '/<repository-name>/'
+  app: {
+    baseURL: '/portfolio-TOP/'
   }
 });

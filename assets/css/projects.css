@@ -35,11 +35,25 @@ img {
   padding: 1rem;
 }
 
+@media (max-width: 1300px) {
+  .project-details-holder {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
 .project-info-holder {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background-image: url(/assets/images/circle_FILL.svg);
+  background-repeat: space;
+  background-size: 50px;
+  background-position: center;
+  overflow: hidden;
 }
 
 .project-details-name {
@@ -117,7 +131,7 @@ img {
   background-size: 500%;
   background-color: #0a9ae7;
   animation: linkColorChange 3s infinite alternate;
-  transition: transform .25s;
+  transition: transform 0.25s;
 }
 
 .tryit-link:hover {
@@ -150,22 +164,71 @@ img {
   }
 }
 
-.project-images-holder {
+.project-images-slider-container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
+  align-items: center;
   padding: 1rem;
 }
 
+.project-images-left {
+  grid-column: 1;
+  grid-row: 1;
+  font-size: 4rem;
+  cursor: pointer;
+  background: linear-gradient(to right, transparent, #3c6e87 0%, #0b1317 100%);
+  border-radius: 0.5rem;
+  height: 100%;
+}
+
+.project-images-right {
+  grid-column: 2;
+  grid-row: 1;
+  font-size: 4rem;
+  cursor: pointer;
+  background: linear-gradient(to left, transparent, #3c6e87 0%, #0b1317 100%);
+  border-radius: 0.5rem;
+  height: 100%;
+}
+
+.project-images-holder {
+  grid-column: 1 / 3;
+  grid-row: 2;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+}
+
 .project-details-image {
-  width: 50em;
+  width: 45%;
   align-self: center;
   cursor: zoom-in;
-  transition: transform 0.5s;
+  transition: width 0s;
 }
 
 .project-details-image-zoom-in {
   cursor: zoom-out;
-  transform: scale(1.75);
+  /* transform: scale(1.75); */
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  transition: width 0.25s;
+  z-index: 20;
+}
+
+@media (max-width: 800px) {
+
+  .project-images-slider-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    row-gap: 1rem;
+  }
+  .project-images-holder {
+    flex-direction: column;
+  }
+  .project-details-image {
+    width: 100%;
+  }
 }

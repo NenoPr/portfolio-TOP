@@ -4,16 +4,14 @@
     <div class="about-info">
       <img src="~/assets/images/profile_image.jpg" class="profile-image" />
       <p class="profile-desc">
-        I dabble in programming mostly as to keep the deterioration of my
-        brain at bay from not doing anything with myself, only staying in my
-        room every day, all day, rotting my brain with hate, anger, pity, rage,
-        fear, porn, loneliness, sadness, neglect.
+        I dabble in programming mostly as to keep the deterioration of my brain
+        at bay from not doing anything with myself, only staying in my room
+        every day, all day, rotting my brain with hate, anger, pity, rage, fear,
+        porn, loneliness, sadness, neglect.
       </p>
     </div>
     <div class="about-tools-holder">
-      <div class="about-tools-header">
-        Some technologies I have worked with
-      </div>
+      <div class="about-tools-header">Some technologies I have worked with</div>
       <div class="about-tools">
         <div class="about-tool-holder">
           <div>JavaScript</div>
@@ -154,6 +152,29 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@media (max-width: 1300px) {
+  .about-container {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto 1fr;
+    gap: 0px;
+    row-gap: 1rem;
+    width: 95%;
+  }
+
+  .about-header {
+    grid-row: 1;
+  }
+
+  .about-info {
+    grid-row: 2;
+    align-items: center;
+  }
+
+  .about-tools-holder {
+    grid-row: 3;
+}
 }
 
 .about-tools-header {

@@ -33,27 +33,32 @@
         class="tryit-link"
         >Try it Out</a
       >
-      <div class="project-images-holder">
-        <img
-          v-bind:src="'_nuxt/assets/images/' + project.image"
-          class="project-details-image"
-          alt=""
-        />
-        <!-- <img
-          v-bind:src="'_nuxt/assets/images/' + project.image"
-          class="project-details-image"
-          alt=""
-        /> -->
-        <!-- <img
-          v-bind:src="'_nuxt/assets/images/' + project.image"
-          class="project-details-image"
-          alt=""
-        />
-        <img
-          v-bind:src="'_nuxt/assets/images/' + project.image"
-          class="project-details-image"
-          alt=""
-        /> -->
+      <div class="project-images-slider-container">
+        <div class="project-images-left">&lt</div>
+
+        <div class="project-images-holder">
+          <img
+            v-bind:src="'_nuxt/assets/images/' + project.image"
+            class="project-details-image"
+            alt=""
+          />
+          <img
+            v-bind:src="'_nuxt/assets/images/' + project.image"
+            class="project-details-image"
+            alt=""
+          />
+          <!-- <img
+            v-bind:src="'_nuxt/assets/images/' + project.image"
+            class="project-details-image"
+            alt=""
+            />
+            <img
+            v-bind:src="'_nuxt/assets/images/' + project.image"
+            class="project-details-image"
+            alt=""
+            /> -->
+        </div>
+        <div class="project-images-right">></div>
       </div>
     </div>
     <div class="separator"></div>

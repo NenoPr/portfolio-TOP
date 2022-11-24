@@ -17,7 +17,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 60%;
+  width: 65%;
   border: 0.1rem solid rgb(199, 114, 114);
   border-radius: 0.5rem;
   border-top: rgb(199, 114, 114) solid 0.5rem;
@@ -38,5 +38,11 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+
+@media (max-width: 1300px) {
+  .projects-container {
+    width: 95%;
+  }
 }
 </style>

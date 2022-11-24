@@ -3,7 +3,7 @@
     <nav class="top-header">
       <div class="top-header-nav">
         <h2 class="header title-header">Hi, I'm Neno</h2>
-        <h2 class="w-[30%]"></h2>
+        <h2 class="header-space-fill"></h2>
         <h2 class="header home" @click="FocusToElement">Home</h2>
         <h2 class="header about" @click="FocusToElement">About Neno</h2>
         <h2
@@ -270,6 +270,7 @@ onMounted(() => {
   );
   border-bottom: 0.02rem solid #3f4a55;
   flex-wrap: wrap;
+  z-index: 10;
   /* transition: margin-bottom 0.4s ease-out;
   margin-bottom: calc(2.2em + 1rem); */
 }
@@ -284,11 +285,15 @@ onMounted(() => {
   justify-content: center;
 }
 
+.header-space-fill {
+  width: 30%;
+}
+
 .top-header-projects-selection {
   display: flex;
   justify-content: center;
   grid-row: 2;
-  position: relative;
+  /* position: relative; */
   top: 0px;
   gap: 1rem;
   margin-top: 0;
@@ -298,7 +303,6 @@ onMounted(() => {
   transition: height 0.4s ease-out, opacity 0.4s ease-out,
     margin-top 0.4s ease-out;
   font-size: 1rem;
-  overflow: hidden;
 }
 
 .show-top-header-projects-selection-hover {
@@ -326,8 +330,10 @@ onMounted(() => {
   /* background-color: #141518; */
 }
 
-.projects-selection-project:hover {
-  border-color: #5daee0;
+@media (hover: hover) {
+  .projects-selection-project:hover {
+    border-color: #5daee0;
+  }
 }
 
 .header {
@@ -346,8 +352,10 @@ onMounted(() => {
   /* transition: padding 0.2s, margin 0.2s; */
 }
 
-.header:hover {
-  border-color: #41b3cc;
+@media (hover: hover) {
+  .header:hover {
+    border-color: #41b3cc;
+  }
 }
 
 .header:active {
@@ -375,5 +383,53 @@ onMounted(() => {
   flex-basis: 100%;
   background-color: #0b1317;
   background: linear-gradient(to bottom, transparent, #0d3346);
+}
+
+@media (max-width: 800px) {
+  .top-header {
+    padding: 3%;
+    padding-bottom: 1%;
+  }
+  .top-header-nav {
+  }
+  .header {
+    text-align: center;
+    padding: 0.5rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    font-size: 12px;
+  }
+  .header:active {
+    padding: 0.5rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    margin: 0px;
+  }
+  .header.focus {
+    outline: none;
+  }
+  .header-space-fill {
+    width: 0px;
+  }
+  .top-header-projects-selection {
+    margin: 0px;
+    overflow-x: auto;
+    justify-content: flex-start;
+  }
+  .projects-selection-project {
+    font-size: 12px;
+    flex: 0 0 auto;
+  }
+
+  .top-header-projects-selection::-webkit-scrollbar {
+    background: transparent;
+    height: 2px;
+  }
+
+  .top-header-projects-selection::-webkit-scrollbar-thumb {
+    background: #1f94cf;
+    border-radius: 0.5rem;
+    height: 1px;
+  }
 }
 </style>

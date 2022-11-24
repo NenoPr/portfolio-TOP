@@ -28,6 +28,12 @@ vue<template>
     background-position: 70% 50%;
   }
 
+  @media (max-width: 1300px) {
+    .contact-container {
+      width: 95%;
+    }
+  }
+
   img {
     border-radius: .5rem;
     width: 50%;

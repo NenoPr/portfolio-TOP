@@ -134,6 +134,9 @@ function setNavStyleIfInViewport() {
       document
         .querySelector(".top-header-projects-selection")
         .classList.add("show-top-header-projects-selection");
+      // document
+      //   .querySelector(".top-header")
+      //   .classList.add("top-header-smooth-transition");
     }
     return;
   } else {
@@ -143,6 +146,9 @@ function setNavStyleIfInViewport() {
   document
     .querySelector(".top-header-projects-selection")
     .classList.remove("show-top-header-projects-selection");
+  // document
+  //   .querySelector(".top-header")
+  //   .classList.remove("top-header-smooth-transition");
 }
 
 function isProjectInView() {
@@ -167,6 +173,9 @@ function showProjectsNavBar() {
   document
     .querySelector(".top-header-projects-selection")
     .classList.add("show-top-header-projects-selection-hover");
+  // document
+  //   .querySelector(".top-header")
+  //   .classList.add("top-header-smooth-transition");
   console.log(document.querySelector(".top-header-projects-selection-hover"));
 }
 
@@ -174,6 +183,9 @@ function closeProjectsNavBar() {
   document
     .querySelector(".top-header-projects-selection")
     .classList.remove("show-top-header-projects-selection-hover");
+  // document
+  //   .querySelector(".top-header")
+  //   .classList.remove("top-header-smooth-transition");
   console.log(document.querySelector(".top-header-projects-selection-hover"));
 }
 
@@ -245,6 +257,7 @@ onMounted(() => {
   padding: 1rem;
   position: sticky;
   position: -webkit-sticky;
+  position: fixed;
   top: 0px;
   background-color: #0b1317;
   background: linear-gradient(
@@ -257,8 +270,13 @@ onMounted(() => {
   );
   border-bottom: 0.02rem solid #3f4a55;
   flex-wrap: wrap;
-  z-index: 99;
+  /* transition: margin-bottom 0.4s ease-out;
+  margin-bottom: calc(2.2em + 1rem); */
 }
+
+/* .top-header-smooth-transition {
+  margin-bottom: 0px;
+} */
 
 .top-header-nav {
   grid-row: 1;
@@ -277,22 +295,22 @@ onMounted(() => {
   font-weight: bold;
   opacity: 0;
   height: 0px;
-  transition: height 0.4s ease-out, opacity 0.2s ease-out,
+  transition: height 0.4s ease-out, opacity 0.4s ease-out,
     margin-top 0.4s ease-out;
   font-size: 1rem;
   overflow: hidden;
 }
 
 .show-top-header-projects-selection-hover {
-  height: calc(2.2em);
-  opacity: 1;
   margin-top: 1rem;
+  height: 2.2em;
+  opacity: 1;
 }
 
 .show-top-header-projects-selection {
-  height: calc(2.2em);
-  opacity: 1;
   margin-top: 1rem;
+  height: 2.2em;
+  opacity: 1;
 }
 
 .projects-selection-project {
@@ -304,6 +322,7 @@ onMounted(() => {
   padding-right: 0.25rem;
   cursor: pointer;
   overflow: hidden;
+  text-align: center;
   /* background-color: #141518; */
 }
 
@@ -324,7 +343,7 @@ onMounted(() => {
   font-weight: bold;
   color: white;
   cursor: pointer;
-  transition: padding 0.2s, margin 0.2s;
+  /* transition: padding 0.2s, margin 0.2s; */
 }
 
 .header:hover {

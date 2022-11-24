@@ -1,5 +1,5 @@
 <template>
-  <div class="home-container h-[700px]">
+  <div class="home-container h-[700px] mt-[7rem]">
     <h1 class="pr-[50%] text-[2rem]">Hello, my name is</h1>
     <h1 class="text-[2rem] pr-[40%]">Neno</h1>
     <h1 class="w-[50%] pr-[]">

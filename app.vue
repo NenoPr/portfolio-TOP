@@ -290,7 +290,7 @@ onMounted(() => {
 }
 
 .top-header-projects-selection {
-  display: none;
+  display: flex;
   justify-content: center;
   grid-row: 2;
   /* position: relative; */
@@ -303,17 +303,18 @@ onMounted(() => {
   transition: height 0.4s ease-out, opacity 0.4s ease-out,
     margin-top 0.4s ease-out;
   font-size: 1rem;
+  pointer-events: none;
 }
 
 .show-top-header-projects-selection-hover {
-  display: flex;
+  pointer-events: all;
   margin-top: 1rem;
   height: 2.2em;
   opacity: 1;
 }
 
 .show-top-header-projects-selection {
-  display: flex;
+  pointer-events: all;
   margin-top: 1rem;
   height: 2.2em;
   opacity: 1;

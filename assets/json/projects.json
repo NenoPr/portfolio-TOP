@@ -6,19 +6,19 @@
         "tools": [
             {
                 "tool": "HTML",
-                "image": "assets/images/html-5-logo.png"
+                "image": "html-5-logo.png"
             },
             {
                 "tool": "CSS",
-                "image": "assets/images/CSS3_logo.png"
+                "image": "CSS3_logo.png"
             },
             {
                 "tool": "JavaScript",
-                "image": "assets/images/JavaScript_logo.png"
+                "image": "JavaScript_logo.png"
             },
             {
                 "tool": "React",
-                "image": "assets/images/React-logo.png"
+                "image": "React-logo.png"
             }
         ],
         "webLink": "https://nenopr.github.io/memory-card-OdinProject/",
@@ -31,19 +31,19 @@
         "tools": [
             {
                 "tool": "HTML",
-                "image": "assets/images/html-5-logo.png"
+                "image": "html-5-logo.png"
             },
             {
                 "tool": "CSS",
-                "image": "assets/images/CSS3_logo.png"
+                "image": "CSS3_logo.png"
             },
             {
                 "tool": "JavaScript",
-                "image": "assets/images/JavaScript_logo.png"
+                "image": "JavaScript_logo.png"
             },
             {
                 "tool": "React",
-                "image": "assets/images/React-logo.png"
+                "image": "React-logo.png"
             }
         ],
         "webLink": "https://nenopr.github.io/shopping-cart-OdinProject/#/",
@@ -56,15 +56,15 @@
         "tools": [
             {
                 "tool": "HTML",
-                "image": "assets/images/html-5-logo.png"
+                "image": "html-5-logo.png"
             },
             {
                 "tool": "CSS",
-                "image": "assets/images/CSS3_logo.png"
+                "image": "CSS3_logo.png"
             },
             {
                 "tool": "JavaScript",
-                "image": "assets/images/JavaScript_logo.png"
+                "image": "JavaScript_logo.png"
             }
         ],
         "webLink": "https://nenopr.github.io/battleship-TheOdinProject/",
@@ -77,23 +77,23 @@
         "tools": [
             {
                 "tool": "HTML",
-                "image": "assets/images/html-5-logo.png"
+                "image": "html-5-logo.png"
             },
             {
                 "tool": "CSS",
-                "image": "assets/images/CSS3_logo.png"
+                "image": "CSS3_logo.png"
             },
             {
                 "tool": "JavaScript",
-                "image": "assets/images/JavaScript_logo.png"
+                "image": "JavaScript_logo.png"
             },
             {
                 "tool": "React",
-                "image": "assets/images/React-logo.png"
+                "image": "React-logo.png"
             },
             {
                 "tool": "Firebase",
-                "image": "assets/images/firebase-logo.png"
+                "image": "firebase-logo.png"
             }
         ],
         "webLink": "https://nenopr.github.io/find-me-image-tagging-game/",
@@ -106,19 +106,19 @@
         "tools": [
             {
                 "tool": "HTML",
-                "image": "assets/images/html-5-logo.png"
+                "image": "html-5-logo.png"
             },
             {
                 "tool": "CSS",
-                "image": "assets/images/CSS3_logo.png"
+                "image": "CSS3_logo.png"
             },
             {
                 "tool": "JavaScript",
-                "image": "assets/images/JavaScript_logo.png"
+                "image": "JavaScript_logo.png"
             },
             {
                 "tool": "React",
-                "image": "assets/images/React-logo.png"
+                "image": "React-logo.png"
             }
         ],
         "webLink": "https://nenopr.github.io/cv-project-TheOdinProject/",
@@ -131,15 +131,15 @@
         "tools": [
             {
                 "tool": "HTML",
-                "image": "assets/images/html-5-logo.png"
+                "image": "html-5-logo.png"
             },
             {
                 "tool": "CSS",
-                "image": "assets/images/CSS3_logo.png"
+                "image": "CSS3_logo.png"
             },
             {
                 "tool": "JavaScript",
-                "image": "assets/images/JavaScript_logo.png"
+                "image": "JavaScript_logo.png"
             }
         ],
         "webLink": "https://nenopr.github.io/tic-tac-toe-project-The-Odin-Project/",
@@ -152,25 +152,25 @@
         "tools": [
             {
                 "tool": "HTML",
-                "image": "assets/images/html-5-logo.png"
+                "image": "html-5-logo.png"
             },
             {
                 "tool": "CSS",
-                "image": "assets/images/CSS3_logo.png"
+                "image": "CSS3_logo.png"
             },
             {
                 "tool": "JavaScript",
-                "image": "assets/images/JavaScript_logo.png"
+                "image": "JavaScript_logo.png"
             }
             ,
             {
                 "tool": "Vue",
-                "image": "assets/images/Vue_Logo.png"
+                "image": "Vue_Logo.png"
             }
             ,
             {
                 "tool": "Nuxt3",
-                "image": "assets/images/nuxt3-logo.png"
+                "image": "nuxt3-logo.png"
             }
         ],
         "webLink": "https://lloyds-verdas-frontend-assigment.vercel.app/en",

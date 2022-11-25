@@ -16,10 +16,7 @@
               <div class="project-details-tool">
                 <div class="project-details-tool-name">{{ item.tool }}</div>
                 <div class="project-details-logo">
-                  <img
-                    v-bind:src="`/_nuxt/${item.image}`"
-                    :alt="item.tool"
-                  />
+                  <img :src="`nuxt/${item.image}`" :alt="item.tool" />
                 </div>
               </div>
             </template>
@@ -38,12 +35,12 @@
 
         <div class="project-images-holder">
           <img
-            v-bind:src="'_nuxt/assets/images/' + project.image"
+            v-bind:src="'nuxt/' + project.image"
             class="project-details-image"
             alt=""
           />
           <img
-            v-bind:src="'_nuxt/assets/images/' + project.image"
+            v-bind:src="'nuxt/' + project.image"
             class="project-details-image"
             alt=""
           />
@@ -67,6 +64,11 @@
 
 <script setup>
 import projects from "~/assets/json/projects.json";
+
+function imageUrl(image) {
+  return new URL(`/public/img/${image}`, import.meta.url)
+} 
+  
 
 function toggleZoom(e) {
   if (!e.target.classList.contains("project-details-image-zoom-in")) {

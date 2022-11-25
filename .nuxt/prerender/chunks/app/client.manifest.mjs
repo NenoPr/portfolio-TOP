@@ -111,7 +111,7 @@ const client_manifest = {
       "virtual:nuxt:/home/neno/WebProjects/The Odin Project Projects/portfolio-TOP/.nuxt/error-component.mjs"
     ],
     "css": [
-      "entry.8ea6f470.css"
+      "entry.59c673c3.css"
     ],
     "assets": [
       "profile_image.5219ffc5.jpg",
@@ -133,8 +133,8 @@ const client_manifest = {
       "background_contact.861af418.jpg"
     ]
   },
-  "entry.8ea6f470.css": {
-    "file": "entry.8ea6f470.css",
+  "entry.59c673c3.css": {
+    "file": "entry.59c673c3.css",
     "resourceType": "style"
   },
   "profile_image.5219ffc5.jpg": {
@@ -291,25 +291,25 @@ const client_manifest = {
     "file": "error-500.aa16ed4d.css",
     "resourceType": "style"
   },
-  "pages/index.css": {
-    "resourceType": "style",
-    "file": "index.f92ca0da.css",
-    "src": "pages/index.css"
-  },
-  "node_modules/@nuxt/ui-templates/dist/templates/error-500.css": {
-    "resourceType": "style",
-    "file": "error-500.aa16ed4d.css",
-    "src": "node_modules/@nuxt/ui-templates/dist/templates/error-500.css"
-  },
   "node_modules/@nuxt/ui-templates/dist/templates/error-404.css": {
     "resourceType": "style",
     "file": "error-404.23f2309d.css",
     "src": "node_modules/@nuxt/ui-templates/dist/templates/error-404.css"
   },
+  "pages/index.css": {
+    "resourceType": "style",
+    "file": "index.f92ca0da.css",
+    "src": "pages/index.css"
+  },
   "node_modules/nuxt/dist/app/entry.css": {
     "resourceType": "style",
-    "file": "entry.8ea6f470.css",
+    "file": "entry.59c673c3.css",
     "src": "node_modules/nuxt/dist/app/entry.css"
+  },
+  "node_modules/@nuxt/ui-templates/dist/templates/error-500.css": {
+    "resourceType": "style",
+    "file": "error-500.aa16ed4d.css",
+    "src": "node_modules/@nuxt/ui-templates/dist/templates/error-500.css"
   }
 };
 

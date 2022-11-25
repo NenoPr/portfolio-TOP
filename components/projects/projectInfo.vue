@@ -17,7 +17,7 @@
                 <div class="project-details-tool-name">{{ item.tool }}</div>
                 <div class="project-details-logo">
                   <img
-                    v-bind:src="'_nuxt/assets/images/' + item.image"
+                    v-bind:src="`/_nuxt/assets/images/${item.image}`"
                     :alt="item.tool"
                   />
                 </div>

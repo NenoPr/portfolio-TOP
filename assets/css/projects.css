@@ -71,6 +71,11 @@ img {
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
+  background-image: url(/assets/images/circle_FILL.svg);
+  background-repeat: space;
+  background-size: 50px;
+  background-position: center;
+  overflow: hidden;
 }
 
 .project-details-tool-header {

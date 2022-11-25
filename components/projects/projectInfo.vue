@@ -16,7 +16,7 @@
               <div class="project-details-tool">
                 <div class="project-details-tool-name">{{ item.tool }}</div>
                 <div class="project-details-logo">
-                  <img :src="`nuxt/${item.image}`" :alt="item.tool" />
+                  <img :src="`img/${item.image}`" :alt="item.tool" />
                 </div>
               </div>
             </template>
@@ -35,12 +35,12 @@
 
         <div class="project-images-holder">
           <img
-            v-bind:src="'nuxt/' + project.image"
+            v-bind:src="'img/' + project.image"
             class="project-details-image"
             alt=""
           />
           <img
-            v-bind:src="'nuxt/' + project.image"
+            v-bind:src="'img/' + project.image"
             class="project-details-image"
             alt=""
           />

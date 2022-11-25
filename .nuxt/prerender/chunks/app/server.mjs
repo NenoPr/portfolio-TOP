@@ -521,7 +521,7 @@ const _routes = [
     meta: __nuxt_page_meta,
     alias: (__nuxt_page_meta == null ? void 0 : __nuxt_page_meta.alias) || [],
     redirect: (__nuxt_page_meta == null ? void 0 : __nuxt_page_meta.redirect) || void 0,
-    component: () => import('./_nuxt/index.5297abb0.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/index.c6fb7fdd.mjs').then((m) => m.default || m)
   }
 ];
 const routerOptions0 = {
@@ -978,11 +978,11 @@ const _sfc_main$5 = {
     return (_ctx, _push, _parent, _attrs) => {
       _push(`<!--[-->`);
       ssrRenderList(unref(projects), (project) => {
-        _push(`<!--[--><div class="${ssrRenderClass([project.titleClass, "project-holder"])}" data-v-0d9883e7><div class="project-details-name" data-v-0d9883e7>${ssrInterpolate(project.title)}</div><div class="project-details-holder" data-v-0d9883e7><div class="project-info-holder" data-v-0d9883e7><div class="font-bold text-xl" data-v-0d9883e7>Description:</div><p class="project-details-description" data-v-0d9883e7>${ssrInterpolate(project.desc)}</p></div><div class="project-tools-holder" data-v-0d9883e7><p class="project-details-tool-header" data-v-0d9883e7>Tools Used</p><div class="project-details-tools-holder" data-v-0d9883e7><!--[-->`);
+        _push(`<!--[--><div class="${ssrRenderClass([project.titleClass, "project-holder"])}" data-v-a2f50ca2><div class="project-details-name" data-v-a2f50ca2>${ssrInterpolate(project.title)}</div><div class="project-details-holder" data-v-a2f50ca2><div class="project-info-holder" data-v-a2f50ca2><div class="font-bold text-xl" data-v-a2f50ca2>Description:</div><p class="project-details-description" data-v-a2f50ca2>${ssrInterpolate(project.desc)}</p></div><div class="project-tools-holder" data-v-a2f50ca2><p class="project-details-tool-header" data-v-a2f50ca2>Tools Used</p><div class="project-details-tools-holder" data-v-a2f50ca2><!--[-->`);
         ssrRenderList(project.tools, (item) => {
-          _push(`<div class="project-details-tool" data-v-0d9883e7><div class="project-details-tool-name" data-v-0d9883e7>${ssrInterpolate(item.tool)}</div><div class="project-details-logo" data-v-0d9883e7><img${ssrRenderAttr("src", "_nuxt/assets/images/" + item.image)}${ssrRenderAttr("alt", item.tool)} data-v-0d9883e7></div></div>`);
+          _push(`<div class="project-details-tool" data-v-a2f50ca2><div class="project-details-tool-name" data-v-a2f50ca2>${ssrInterpolate(item.tool)}</div><div class="project-details-logo" data-v-a2f50ca2><img${ssrRenderAttr("src", `/_nuxt/assets/images/${item.image}`)}${ssrRenderAttr("alt", item.tool)} data-v-a2f50ca2></div></div>`);
         });
-        _push(`<!--]--></div></div></div><a${ssrRenderAttr("href", `${project.webLink}`)} target="_blank" rel="noreferrer noopener" class="tryit-link" data-v-0d9883e7>Try it Out</a><div class="project-images-slider-container" data-v-0d9883e7><div class="project-images-left" data-v-0d9883e7>&lt;</div><div class="project-images-holder" data-v-0d9883e7><img${ssrRenderAttr("src", "_nuxt/assets/images/" + project.image)} class="project-details-image" alt="" data-v-0d9883e7><img${ssrRenderAttr("src", "_nuxt/assets/images/" + project.image)} class="project-details-image" alt="" data-v-0d9883e7></div><div class="project-images-right" data-v-0d9883e7>&gt;</div></div></div><div class="separator" data-v-0d9883e7></div><!--]-->`);
+        _push(`<!--]--></div></div></div><a${ssrRenderAttr("href", `${project.webLink}`)} target="_blank" rel="noreferrer noopener" class="tryit-link" data-v-a2f50ca2>Try it Out</a><div class="project-images-slider-container" data-v-a2f50ca2><div class="project-images-left" data-v-a2f50ca2>&lt;</div><div class="project-images-holder" data-v-a2f50ca2><img${ssrRenderAttr("src", "_nuxt/assets/images/" + project.image)} class="project-details-image" alt="" data-v-a2f50ca2><img${ssrRenderAttr("src", "_nuxt/assets/images/" + project.image)} class="project-details-image" alt="" data-v-a2f50ca2></div><div class="project-images-right" data-v-a2f50ca2>&gt;</div></div></div><div class="separator" data-v-a2f50ca2></div><!--]-->`);
       });
       _push(`<!--]-->`);
     };
@@ -994,7 +994,7 @@ _sfc_main$5.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/projects/projectInfo.vue");
   return _sfc_setup$5 ? _sfc_setup$5(props, ctx) : void 0;
 };
-const __nuxt_component_0 = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["__scopeId", "data-v-0d9883e7"]]);
+const __nuxt_component_0 = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["__scopeId", "data-v-a2f50ca2"]]);
 const _sfc_main$4 = {};
 function _sfc_ssrRender$2(_ctx, _push, _parent, _attrs) {
   const _component_ProjectsProjectInfo = __nuxt_component_0;
@@ -1066,7 +1066,7 @@ const _sfc_main = {
   __name: "nuxt-root",
   __ssrInlineRender: true,
   setup(__props) {
-    const ErrorComponent = defineAsyncComponent(() => import('./_nuxt/error-component.196540c0.mjs').then((r) => r.default || r));
+    const ErrorComponent = defineAsyncComponent(() => import('./_nuxt/error-component.dbb3772d.mjs').then((r) => r.default || r));
     const nuxtApp = useNuxtApp();
     nuxtApp.deferHydration();
     provide("_route", useRoute());

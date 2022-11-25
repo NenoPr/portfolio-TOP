@@ -9,7 +9,7 @@ const styles = {
   "components/footer.vue": () => import('./_nuxt/footer-styles.a38f9831.mjs').then(interopDefault),
   "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue": () => import('./_nuxt/error-404-styles.956de7dd.mjs').then(interopDefault),
   "node_modules/@nuxt/ui-templates/dist/templates/error-500.vue": () => import('./_nuxt/error-500-styles.44debd55.mjs').then(interopDefault),
-  "components/projects/projectInfo.vue": () => import('./_nuxt/projectInfo-styles.0e55a327.mjs').then(interopDefault)
+  "components/projects/projectInfo.vue": () => import('./_nuxt/projectInfo-styles.b30a89e5.mjs').then(interopDefault)
 };
 
 export { styles as default };

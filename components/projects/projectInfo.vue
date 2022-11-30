@@ -1,50 +1,54 @@
 <template>
   <template v-for="project in projects" :key="project.titleClass">
-    <div class="project-holder" :class="project.titleClass">
-      <div class="project-details-name">{{ project.title }}</div>
-      <div class="project-details-holder">
-        <div class="project-info-holder">
-          <div class="font-bold text-xl">Description:</div>
-          <p class="project-details-description">
-            {{ project.desc }}
-          </p>
-        </div>
-        <div class="project-tools-holder">
-          <p class="project-details-tool-header">Tools Used</p>
-          <div class="project-details-tools-holder">
-            <template v-for="item in project.tools" :key="item.tool">
-              <div class="project-details-tool">
-                <div class="project-details-tool-name">{{ item.tool }}</div>
-                <div class="project-details-logo">
-                  <img :src="`img/${item.image}`" :alt="item.tool" />
-                </div>
+    <div class="project-holder-decoration">
+      <div class="project-holder-decoration-2">
+        <div class="project-holder" :class="project.titleClass">
+          <div class="project-details-name">{{ project.title }}</div>
+          <div class="project-details-holder">
+            <div class="project-info-holder-decoration">
+              <div class="project-info-holder">
+                <div class="font-bold text-xl">Description:</div>
+                <p class="project-details-description">
+                  {{ project.desc }}
+                </p>
               </div>
-            </template>
+            </div>
+            <div class="project-tools-holder">
+              <p class="project-details-tool-header">Tools Used</p>
+              <div class="project-details-tools-holder">
+                <template v-for="item in project.tools" :key="item.tool">
+                  <div class="project-details-tool">
+                    <div class="project-details-tool-name">{{ item.tool }}</div>
+                    <div class="project-details-logo">
+                      <img :src="`img/${item.image}`" :alt="item.tool" />
+                    </div>
+                  </div>
+                </template>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <a
-        :href="`${project.webLink}`"
-        target="_blank"
-        rel="noreferrer noopener"
-        class="tryit-link"
-        >Try it Out</a
-      >
-      <div class="project-images-slider-container">
-        <div class="project-images-left">&lt</div>
+          <a
+            :href="`${project.webLink}`"
+            target="_blank"
+            rel="noreferrer noopener"
+            class="tryit-link"
+            >Try it Out</a
+          >
+          <div class="project-images-slider-container">
+            <div class="project-images-left">&lt</div>
 
-        <div class="project-images-holder">
-          <img
-            v-bind:src="'img/' + project.image"
-            class="project-details-image"
-            alt=""
-          />
-          <img
-            v-bind:src="'img/' + project.image"
-            class="project-details-image"
-            alt=""
-          />
-          <!-- <img
+            <div class="project-images-holder">
+              <img
+                v-bind:src="'img/' + project.image"
+                class="project-details-image"
+                alt=""
+              />
+              <img
+                v-bind:src="'img/' + project.image"
+                class="project-details-image"
+                alt=""
+              />
+              <!-- <img
             v-bind:src="'_nuxt/assets/images/' + project.image"
             class="project-details-image"
             alt=""
@@ -54,8 +58,10 @@
             class="project-details-image"
             alt=""
             /> -->
+            </div>
+            <div class="project-images-right">></div>
+          </div>
         </div>
-        <div class="project-images-right">></div>
       </div>
     </div>
     <div class="separator"></div>
@@ -66,9 +72,8 @@
 import projects from "~/assets/json/projects.json";
 
 function imageUrl(image) {
-  return new URL(`/public/img/${image}`, import.meta.url)
-} 
-  
+  return new URL(`/public/img/${image}`, import.meta.url);
+}
 
 function toggleZoom(e) {
   if (!e.target.classList.contains("project-details-image-zoom-in")) {

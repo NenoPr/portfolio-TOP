@@ -2,7 +2,7 @@
     "memoryGame": {
         "title": "Memory Game",
         "titleClass": "memory-game",
-        "desc": "A memory based game where the goal is to click every unique image once. Clicking the same image twice will reset the game score and the game will reset. Clicking every unique image in succesion will result in a Win!",
+        "desc": "A memory based game where the goal is to click every unique image once. Clicking the same image twice will reset the game score and the game will reset. Clicking every unique image in succession will result in a Win!",
         "tools": [
             {
                 "tool": "HTML",
@@ -69,6 +69,27 @@
         ],
         "webLink": "https://nenopr.github.io/battleship-TheOdinProject/",
         "image": "battleship_game.png"
+    },
+    "weatherApp": {
+        "title": "Weather App",
+        "titleClass": "weather-app",
+        "desc": "An api based app, where you enter a desired destination and the app sends the request to a weather api. After it fetches the data it displays basic information like temperature, wind speed, humidity, rain, fog, clear, and the time of day.",
+        "tools": [
+            {
+                "tool": "HTML",
+                "image": "html-5-logo.png"
+            },
+            {
+                "tool": "CSS",
+                "image": "CSS3_logo.png"
+            },
+            {
+                "tool": "JavaScript",
+                "image": "JavaScript_logo.png"
+            }
+        ],
+        "webLink": "https://nenopr.github.io/weather-app-TheOdinProject/",
+        "image": "wheater_app.png"
     },
     "imageTaggingGame": {
         "title": "Image Tagging Game",

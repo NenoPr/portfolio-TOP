@@ -26,6 +26,29 @@ img {
   padding-top: 1rem;
   padding-bottom: 1rem;
   border-radius: 0.5rem;
+  backdrop-filter: blur(.1rem);
+}
+
+.project-holder-decoration {
+  background: radial-gradient( #461882, #0b1317 50%);
+  background-size: 200%;
+  background-position: center;
+  animation: linkColorChange 5s infinite alternate;
+  border-radius: .5rem;
+}
+
+.project-holder-decoration-2 {
+  background-image: url(/assets/images/circle_FILL.svg);
+  background-repeat: space;
+  background-size: 1.5%;
+  background-position: center;
+  overflow: hidden;
+}
+
+@media (max-width: 800px) {
+  .project-holder-decoration-2 {
+    background-size: 5%;
+  }
 }
 
 .project-details-holder {
@@ -33,12 +56,19 @@ img {
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
   padding: 1rem;
+  align-items: center;
+  /* background-image: url(/assets/images/circle_FILL.svg);
+  background-repeat: space;
+  background-size: 50px;
+  background-position: center;
+  overflow: hidden; */
+
 }
 
 @media (max-width: 1300px) {
   .project-details-holder {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto auto;
   }
 }
 
@@ -49,11 +79,18 @@ img {
   gap: 1rem;
   border-radius: 0.5rem;
   padding: 1rem;
-  background-image: url(/assets/images/circle_FILL.svg);
-  background-repeat: space;
-  background-size: 50px;
-  background-position: center;
-  overflow: hidden;
+  background-color: #3b11c6;
+  position: relative;
+  top: 0rem;
+  right: 2rem;
+}
+
+.project-info-holder-decoration {
+  background-color: rgba(255, 255, 255, 0.515);
+  border-radius: .5rem;
+  padding: 1rem;
+  position: relative;
+  height: 100%;
 }
 
 .project-details-name {
@@ -71,16 +108,14 @@ img {
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
-  background-image: url(/assets/images/circle_FILL.svg);
-  background-repeat: space;
-  background-size: 50px;
-  background-position: center;
-  overflow: hidden;
+  background-color: #007fc370;
+  padding: .5rem;
+  border-radius: .5rem;
 }
 
 .project-details-tool-header {
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .project-details-tools-holder {
@@ -120,28 +155,32 @@ img {
 }
 
 .tryit-link {
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     45deg,
     rgb(208, 19, 19),
     rgb(206, 149, 17),
     rgb(13, 113, 200)
-  );
+  ); */
   padding: 0.5rem;
-  border: 0.1rem solid white;
+  border: 0.2rem solid rgba(255, 255, 255, 0);
   border-radius: 0.5rem;
   font-weight: bold;
   font-size: 1.5rem;
   width: fit-content;
   align-self: center;
   background-size: 500%;
-  background-color: #0a9ae7;
-  animation: linkColorChange 3s infinite alternate;
+  background-color: #007fc3;
+  /* animation: linkColorChange 3s infinite alternate; */
   transition: transform 0.25s;
 }
 
 .tryit-link:hover {
-  animation: buttonPulse 0.5s ease-in-out infinite alternate,
-    linkColorChange 3s infinite alternate;
+  /* animation: buttonPulse 0.5s ease-in-out infinite alternate,
+    linkColorChange 3s infinite alternate; */
+  background-color: white;
+  color: #0b1317;
+  border-color: #0a9ae7;
+    
 }
 
 .tryit-link:active {
@@ -157,7 +196,7 @@ img {
   }
 }
 
-@keyframes buttonPulse {
+/* @keyframes buttonPulse {
   0% {
     transform: scale(1);
   }
@@ -167,7 +206,7 @@ img {
   100% {
     transform: scale(1);
   }
-}
+} */
 
 .project-images-slider-container {
   display: flex;
@@ -223,7 +262,6 @@ img {
 }
 
 @media (max-width: 800px) {
-
   .project-images-slider-container {
     display: grid;
     grid-template-columns: auto auto;
@@ -235,5 +273,11 @@ img {
   }
   .project-details-image {
     width: 100%;
+  }
+  .project-images-right {
+    grid-row: 3;
+  }
+  .project-images-left {
+    grid-row: 3;
   }
 }

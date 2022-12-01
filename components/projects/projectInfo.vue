@@ -4,9 +4,12 @@
       <div
         class="project-holder-decoration-2"
         :style="{ 'background-image': 'url(img/' + project.image + ')' }"
+        loading="lazy"
       >
         <div class="project-holder" :class="project.titleClass">
-          <div class="project-details-name">{{ project.title }}</div>
+          <div class="project-details-name-deco">
+            <div class="project-details-name">{{ project.title }}</div>
+          </div>
           <div class="project-details-holder">
             <div class="project-info-holder-decoration">
               <div class="project-info-holder">
@@ -16,27 +19,37 @@
                 </p>
               </div>
             </div>
-            <div class="project-tools-holder">
-              <p class="project-details-tool-header">Tools Used</p>
-              <div class="project-details-tools-holder">
-                <template v-for="item in project.tools" :key="item.tool">
-                  <div class="project-details-tool">
-                    <div class="project-details-tool-name">{{ item.tool }}</div>
-                    <div class="project-details-logo">
-                      <img :src="`img/${item.image}`" :alt="item.tool" />
+            <div class="project-tools-holder-deco">
+              <div class="project-tools-holder">
+                <p class="project-details-tool-header">Tools Used</p>
+                <div class="project-details-tools-holder">
+                  <template v-for="item in project.tools" :key="item.tool">
+                    <div class="project-details-tool">
+                      <div class="project-details-tool-name">
+                        {{ item.tool }}
+                      </div>
+                      <div class="project-details-logo">
+                        <img
+                          :src="`img/${item.image}`"
+                          :alt="item.tool"
+                          loading="lazy"
+                        />
+                      </div>
                     </div>
-                  </div>
-                </template>
+                  </template>
+                </div>
               </div>
             </div>
           </div>
-          <a
-            :href="`${project.webLink}`"
-            target="_blank"
-            rel="noreferrer noopener"
-            class="tryit-link"
-            >PROJECT LINK</a
-          >
+          <div class="tryit-link-deco">
+            <a
+              :href="`${project.webLink}`"
+              target="_blank"
+              rel="noreferrer noopener"
+              class="tryit-link"
+              >PROJECT LINK</a
+            >
+          </div>
           <div class="project-images-slider-container">
             <!-- <div class="project-images-left">&lt</div> -->
 
@@ -45,11 +58,13 @@
                 v-bind:src="'img/' + project.image"
                 class="project-details-image"
                 alt=""
+                loading="lazy"
               />
               <img
                 v-bind:src="'img/' + project.image"
                 class="project-details-image"
                 alt=""
+                loading="lazy"
               />
             </div>
             <!-- <div class="project-images-right">></div> -->

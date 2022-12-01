@@ -24,7 +24,7 @@ img {
   border-radius: 0.5rem;
   padding-top: 1rem;
   /* padding-bottom: 1rem; */
-  backdrop-filter: blur(.3rem);
+  backdrop-filter: blur(0.3rem);
 }
 
 .project-holder-decoration {
@@ -46,7 +46,7 @@ img {
   background-size: 1%;
   background-position: center;
   overflow: hidden; */
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
 
 /* @media (max-width: 800px) {
@@ -66,7 +66,6 @@ img {
   background-size: 50px;
   background-position: center;
   overflow: hidden; */
-
 }
 
 @media (max-width: 1300px) {
@@ -86,12 +85,12 @@ img {
   background-color: #0b1317;
   position: relative;
   top: 0rem;
-  right: 2rem;
+  right: 1.5rem;
 }
 
 .project-info-holder-decoration {
-  background-color: #00000084;
-  border-radius: .5rem;
+  background-color: #0b131750;
+  border-radius: 0.5rem;
   padding: 1rem;
   position: relative;
   height: 90%;
@@ -103,17 +102,44 @@ img {
 .project-details-name {
   font-weight: bold;
   font-size: 1.5rem;
-  background-color: #00000096;
+  background-color: #0b1317;
   color: white;
-  border-radius: .5rem;
-  padding: .5rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  position: relative;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+.project-details-name-deco {
   width: calc(100% - 50%);
   align-self: center;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: #0b131750;
+  border-radius: 0.5rem;
+  position: relative;
 }
 
 .project-details-description {
   text-align: left;
   align-self: center;
+  font-size: 1.2rem;
+}
+
+.project-tools-holder-deco {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  justify-self: center;
+  background-color: #0b131750;
+  border-radius: 0.5rem;
+  position: relative;
+  width: fit-content;
+  height: max-content;
+  padding-right: 1rem;
 }
 
 .project-tools-holder {
@@ -121,11 +147,15 @@ img {
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
-  background-color: #00000084;
-  padding: .5rem;
-  border-radius: .5rem;
+  background-color: #0b1317;
+  padding: 0.5rem;
+  padding-bottom: 1rem;
+  border-radius: 0.5rem;
+  position: relative;
+  top: 1rem;
+  right: 0.5rem;
   width: fit-content;
-  justify-self: center;
+  height: max-content;
 }
 
 .project-details-tool-header {
@@ -169,6 +199,18 @@ img {
   border-radius: 0.25rem;
 }
 
+.tryit-link-deco {
+  padding: .5rem;
+  padding-left: 1rem;
+  padding-right: 0rem;
+  background-color: #0b131750;
+  border-radius: 0.5rem;
+  width: fit-content;
+  align-self: center;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
 .tryit-link {
   /* background-image: linear-gradient(
     45deg,
@@ -177,14 +219,17 @@ img {
     rgb(13, 113, 200)
   ); */
   padding: 0.5rem;
-  border: 0.2rem solid #00000080;
+  border: 0.2rem solid #0b131750;
   border-radius: 0.5rem;
   font-weight: bold;
   font-size: 1.5rem;
   width: fit-content;
   align-self: center;
   background-size: 500%;
-  background-color: #1765cb;
+  background-color: #0b1317;
+  position: relative;
+  top: 1rem;
+  right: 1.5rem;
   /* animation: linkColorChange 3s infinite alternate; */
   transition: transform 0.25s;
 }
@@ -192,10 +237,9 @@ img {
 .tryit-link:hover {
   /* animation: buttonPulse 0.5s ease-in-out infinite alternate,
     linkColorChange 3s infinite alternate; */
-  background-color: #1765cb;
+  background-color: white;
   color: #000000;
   border-color: #000000;
-    
 }
 
 .tryit-link:active {
@@ -279,6 +323,14 @@ img {
 }
 
 @media (max-width: 800px) {
+  .project-details-name {
+  }
+  .project-details-name-deco {
+    width: max-content;
+  }
+  .project-info-holder {
+    right: 1.5rem;
+  }
   .project-images-slider-container {
     display: grid;
     grid-template-columns: auto auto;

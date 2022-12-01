@@ -52,7 +52,7 @@
     "battleshipsGame": {
         "title": "Battleships Game",
         "titleClass": "battleships-game",
-        "desc": "The classic Battleship Game where the victory objective is to sink your enemy ships before they sink yours, while taking turns to take your shots. Rotate and place your own ships on the board and keep firing until you discover hidden enemy ships and sink them all.",
+        "desc": "The classic Battleship Game, the victory objective is to sink your enemy ships before they sink yours, taking turns to fire your shots. Rotate and place your own ships on the board and keep firing to discover hidden enemy ships and sink them all.",
         "tools": [
             {
                 "tool": "HTML",
@@ -73,7 +73,7 @@
     "weatherApp": {
         "title": "Weather App",
         "titleClass": "weather-app",
-        "desc": "An api based app, where you enter a desired destination and the app sends the request to a weather api. After it fetches the data it displays basic information like temperature, wind speed, humidity, rain, fog, clear, and the time of day.",
+        "desc": "An api based app, enter a desired destination and the app sends the request to a weather api. After it fetches the data it displays basic information like temperature, wind speed, humidity, rain, fog, clear, and the time of day.",
         "tools": [
             {
                 "tool": "HTML",

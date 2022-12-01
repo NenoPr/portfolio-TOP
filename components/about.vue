@@ -4,10 +4,7 @@
     <div class="about-info">
       <img src="~/assets/images/profile_image.jpg" class="profile-image" />
       <p class="profile-desc">
-        I dabble in programming mostly as to keep the deterioration of my brain
-        at bay from not doing anything with myself, only staying in my room
-        every day, all day, rotting my brain with hate, anger, pity, rage, fear,
-        porn, loneliness, sadness, neglect.
+        I am a hobbyist programmer, planning to make it professional. My main areas of interest are Web development and AI, Machine Learning/Deep Learning.
       </p>
     </div>
     <div class="about-tools-holder">

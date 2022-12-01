@@ -1,7 +1,10 @@
 <template>
   <template v-for="project in projects" :key="project.titleClass">
     <div class="project-holder-decoration">
-      <div class="project-holder-decoration-2">
+      <div
+        class="project-holder-decoration-2"
+        :style="{ 'background-image': 'url(img/' + project.image + ')' }"
+      >
         <div class="project-holder" :class="project.titleClass">
           <div class="project-details-name">{{ project.title }}</div>
           <div class="project-details-holder">
@@ -32,10 +35,10 @@
             target="_blank"
             rel="noreferrer noopener"
             class="tryit-link"
-            >Try it Out</a
+            >PROJECT LINK</a
           >
           <div class="project-images-slider-container">
-            <div class="project-images-left">&lt</div>
+            <!-- <div class="project-images-left">&lt</div> -->
 
             <div class="project-images-holder">
               <img
@@ -48,18 +51,8 @@
                 class="project-details-image"
                 alt=""
               />
-              <!-- <img
-            v-bind:src="'_nuxt/assets/images/' + project.image"
-            class="project-details-image"
-            alt=""
-            />
-            <img
-            v-bind:src="'_nuxt/assets/images/' + project.image"
-            class="project-details-image"
-            alt=""
-            /> -->
             </div>
-            <div class="project-images-right">></div>
+            <!-- <div class="project-images-right">></div> -->
           </div>
         </div>
       </div>

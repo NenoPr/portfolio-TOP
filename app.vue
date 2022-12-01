@@ -1,39 +1,43 @@
 <template>
+<div class="project-holder-decorationn">
+  <div class="project-holder-decorationn-2">
   <div class="main-container">
-    <nav class="top-header">
-      <div class="top-header-nav">
-        <h2 class="header title-header">Hi, I'm Neno</h2>
-        <h2 class="header-space-fill"></h2>
-        <h2 class="header home" @click="FocusToElement">Home</h2>
-        <h2 class="header about" @click="FocusToElement">About Neno</h2>
-        <h2
-          class="header projects projects-hover"
-          @click="FocusToElement"
-          @mouseenter="showProjectsNavBar"
-        >
-          Projects
-        </h2>
-        <h2 class="header contact" @click="FocusToElement">Contact</h2>
-      </div>
-      <!-- <div class="opacity-header"></div> -->
-      <div class="top-header-projects-selection">
-        <template v-for="project in projects">
-          <div
-            class="projects-selection-project"
-            :class="project.titleClass + '-header'"
-            @click="FocusToProject"
-          >
-            {{ project.title }}
+        <nav class="top-header">
+          <div class="top-header-nav">
+            <h2 class="header title-header">Hi, I'm Neno</h2>
+            <h2 class="header-space-fill"></h2>
+            <h2 class="header home" @click="FocusToElement">Home</h2>
+            <h2 class="header about" @click="FocusToElement">About Neno</h2>
+            <h2
+              class="header projects projects-hover"
+              @click="FocusToElement"
+              @mouseenter="showProjectsNavBar"
+            >
+              Projects
+            </h2>
+            <h2 class="header contact" @click="FocusToElement">Contact</h2>
           </div>
-        </template>
+          <!-- <div class="opacity-header"></div> -->
+          <div class="top-header-projects-selection">
+            <template v-for="project in projects">
+              <div
+                class="projects-selection-project"
+                :class="project.titleClass + '-header'"
+                @click="FocusToProject"
+              >
+                {{ project.title }}
+              </div>
+            </template>
+          </div>
+        </nav>
+        <Home />
+        <About />
+        <Projects />
+        <Contact />
+        <Footer />
+        <!-- <NuxtWelcome /> -->
       </div>
-    </nav>
-    <Home />
-    <About />
-    <Projects />
-    <Contact />
-    <Footer />
-    <!-- <NuxtWelcome /> -->
+    </div>
   </div>
 </template>
 
@@ -271,6 +275,7 @@ onMounted(() => {
   border-bottom: 0.02rem solid #3f4a55;
   flex-wrap: wrap;
   z-index: 10;
+  backdrop-filter: blur(.1rem);
   /* transition: margin-bottom 0.4s ease-out;
   margin-bottom: calc(2.2em + 1rem); */
 }
@@ -371,7 +376,7 @@ onMounted(() => {
 }
 
 .title-header {
-  border: #8bdf25 solid .1rem;
+  border: #8bdf25 solid 0.1rem;
   border-bottom: #8bdf25 solid 0.5rem;
 }
 
@@ -436,4 +441,20 @@ onMounted(() => {
     height: 1px;
   }
 }
+
+/* .project-holder-decorationn {
+  background: radial-gradient(#461882, #0b1317 50%);
+  background-size: 200%;
+  background-position: center;
+  animation: linkColorChange 5s infinite alternate;
+  border-radius: 0.5rem;
+}
+
+.project-holder-decorationn-2 {
+  background-image: url(/assets/images/circle_FILL.svg);
+  background-repeat: space;
+  background-size: 3%;
+  background-position: center;
+  overflow: hidden;
+} */
 </style>

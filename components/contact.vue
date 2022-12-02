@@ -6,7 +6,7 @@ vue
         <h2 class="contact-header">Contact</h2>
         <div class="contact-mail">
           <p>Feel free to contact me at this email:</p>
-          <p class="contact-plead">nenadpredan@gmail.com</p>
+          <p class="contact-plead">kimotsux@gmail.com</p>
           <!-- <img
             src="img/contact_phone_green.jpg"
             alt="mail"

@@ -109,6 +109,7 @@ img {
   position: relative;
   top: 1.5rem;
   right: 1.5rem;
+  border: .2rem solid white;
 }
 
 .project-details-name-deco {
@@ -219,7 +220,7 @@ img {
     rgb(13, 113, 200)
   ); */
   padding: 0.5rem;
-  border: 0.2rem solid #0b131750;
+  border: 0.2rem solid #ffffff;
   border-radius: 0.5rem;
   font-weight: bold;
   font-size: 1.5rem;

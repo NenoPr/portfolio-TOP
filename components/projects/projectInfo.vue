@@ -61,7 +61,7 @@
                 loading="lazy"
               />
               <img
-                v-bind:src="'img/' + project.image"
+                v-bind:src="'img/' + project.image2"
                 class="project-details-image"
                 alt=""
                 loading="lazy"

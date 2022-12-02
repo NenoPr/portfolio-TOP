@@ -1,12 +1,16 @@
 <template>
-  <div class="home-container h-[700px] mt-[7rem]">
-    <h1 class="pr-[50%] text-[2rem]">Hello, my name is</h1>
-    <h1 class="text-[2rem] pr-[40%]">Neno</h1>
-    <h1 class="w-[50%] pr-[]">
-      I am a self thought programer studying Web Developement, Machine Learning
-      and Deep Learning
-    </h1>
-    <img src="" alt="">
+  <div class="home-container">
+    <h1 class="home-hello">Hello, my name is</h1>
+    <div class="home-name-deco">
+      <h1 class="home-name">Neno</h1>
+    </div>
+    <div class="home-introduction-deco">
+      <h1 class="home-introduction">
+        I am a self thought programer studying Web Developement, Machine
+        Learning and Deep Learning
+      </h1>
+    </div>
+    <img src="" alt="" />
     <!-- <div class="nuxt-link">
       <NuxtLink
         to="/projects"
@@ -21,8 +25,12 @@
 
 <style scoped>
 .home-container {
+  height: 700px;
+  margin-top: 7rem;
   --color-one: #c77272;
   --color-two: #39becd;
+  --color-main: #0b1317;
+  --color-main-tran: #0b131750;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -42,6 +50,52 @@
   .home-container {
     width: 95%;
   }
+}
+
+.home-hello {
+  padding-right: 50%;
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+
+.home-name-deco {
+  margin-top: 2rem;
+  background-color: var(--color-main-tran);
+  border-radius: 0.5rem;
+  margin-right: 40%;
+  position: relative;
+}
+
+.home-name {
+  font-size: 4rem;
+  background-color: var(--color-main);
+  border-radius: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  position: relative;
+  top: 1rem;
+  right: 1rem;
+}
+
+.home-introduction-deco {
+  margin-top: 5%;
+  padding: 1rem;
+  background-color: var(--color-main-tran);
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+.home-introduction {
+  width: 50%;
+  font-size: 1.5rem;
+  background-color: var(--color-main);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+  top: 2rem;
+  right: 1rem;
 }
 
 .nuxt-link {

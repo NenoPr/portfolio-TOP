@@ -22,7 +22,8 @@
             }
         ],
         "webLink": "https://nenopr.github.io/memory-card-OdinProject/",
-        "image": "Memory_Game_1080p.png"
+        "image": "Memory_Game_1080p.png",
+        "image2": "Memory_Game_1080p_2.png"
     },
     "ecommerceStore": {
         "title": "Small E-commerce Store",
@@ -47,7 +48,8 @@
             }
         ],
         "webLink": "https://nenopr.github.io/shopping-cart-OdinProject/#/",
-        "image": "ecomerce_frontpage.png"
+        "image": "ecomerce_frontpage.png",
+        "image2": "ecomerce_frontpage_2.png"
     },
     "battleshipsGame": {
         "title": "Battleships Game",
@@ -68,7 +70,8 @@
             }
         ],
         "webLink": "https://nenopr.github.io/battleship-TheOdinProject/",
-        "image": "battleship_game.png"
+        "image": "battleship_game.png",
+        "image2": "battleship_game_2.png"
     },
     "weatherApp": {
         "title": "Weather App",
@@ -89,7 +92,8 @@
             }
         ],
         "webLink": "https://nenopr.github.io/weather-app-TheOdinProject/",
-        "image": "wheater_app.png"
+        "image": "wheater_app.png",
+        "image2": "wheater_app_2.png"
     },
     "imageTaggingGame": {
         "title": "Image Tagging Game",
@@ -118,7 +122,8 @@
             }
         ],
         "webLink": "https://nenopr.github.io/find-me-image-tagging-game/",
-        "image": "imagetagging_game.png"
+        "image": "imagetagging_game.png",
+        "image2": "imagetagging_game_2.png"
     },
     "cvMaker": {
         "title": "CV Maker",
@@ -143,7 +148,8 @@
             }
         ],
         "webLink": "https://nenopr.github.io/cv-project-TheOdinProject/",
-        "image": "CV_maker.png"
+        "image": "CV_maker.png",
+        "image2": "CV_maker_2.png"
     },
     "ticTacToeGame": {
         "title": "Tic-Tac-Toe Game",
@@ -164,7 +170,8 @@
             }
         ],
         "webLink": "https://nenopr.github.io/tic-tac-toe-project-The-Odin-Project/",
-        "image": "tictactoe_game.png"
+        "image": "tictactoe_game.png",
+        "image2": "tictactoe_game_2.png"
     },
     "responsiveWebsite": {
         "title": "Responsive Website",
@@ -195,6 +202,7 @@
             }
         ],
         "webLink": "https://lloyds-verdas-frontend-assigment.vercel.app/en",
-        "image": "lloyds-verdas.png"
+        "image": "lloyds-verdas.png",
+        "image2": "lloyds-verdas_2.png"
     }
 }

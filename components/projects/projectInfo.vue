@@ -1,11 +1,16 @@
 <template>
   <template v-for="project in projects" :key="project.titleClass">
     <div class="project-holder-decoration">
+      <!-- <div class="project-pink-decoration-holder"> -->
+        <!-- <div class="project-pink-decoration-side-left"></div> -->
+        <!-- <div class="project-pink-decoration"></div> -->
+        <!-- <div class="project-pink-decoration-side-right"></div> -->
+      <!-- </div> -->
       <div
         class="project-holder-decoration-2"
-        :style="{ 'background-image': 'url(img/' + project.image + ')' }"
         loading="lazy"
       >
+      <!-- :style="{ 'background-image': 'url(img/' + project.image + ')' }" -->
         <div class="project-holder" :class="project.titleClass">
           <div class="project-details-name-deco">
             <div class="project-details-name">{{ project.title }}</div>
@@ -62,7 +67,19 @@
               />
               <img
                 v-bind:src="'img/' + project.image2"
-                class="project-details-image"
+                class="project-details-image-2"
+                alt=""
+                loading="lazy"
+              />
+              <img
+                v-bind:src="'img/' + project.image"
+                class="project-details-image-3"
+                alt=""
+                loading="lazy"
+              />
+              <img
+                v-bind:src="'img/' + project.image2"
+                class="project-details-image-4"
                 alt=""
                 loading="lazy"
               />

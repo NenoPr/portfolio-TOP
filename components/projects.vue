@@ -26,9 +26,9 @@
   align-items: center;
   /* background-color: #0b1317c0; */
   backdrop-filter: blur(0.5rem);
-  border: 0.1rem solid rgb(199, 114, 114);
+  /* border: 0.1rem solid rgb(199, 114, 114); */
   border-radius: 0.5rem;
-  border-top: rgb(199, 114, 114) solid 0.5rem;
+  /* border-top: rgb(199, 114, 114) solid 0.5rem; */
   text-align: center;
   padding: 0.5rem;
 }

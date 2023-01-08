@@ -2,15 +2,12 @@
   <template v-for="project in projects" :key="project.titleClass">
     <div class="project-holder-decoration">
       <!-- <div class="project-pink-decoration-holder"> -->
-        <!-- <div class="project-pink-decoration-side-left"></div> -->
-        <!-- <div class="project-pink-decoration"></div> -->
-        <!-- <div class="project-pink-decoration-side-right"></div> -->
+      <!-- <div class="project-pink-decoration-side-left"></div> -->
+      <!-- <div class="project-pink-decoration"></div> -->
+      <!-- <div class="project-pink-decoration-side-right"></div> -->
       <!-- </div> -->
-      <div
-        class="project-holder-decoration-2"
-        loading="lazy"
-      >
-      <!-- :style="{ 'background-image': 'url(img/' + project.image + ')' }" -->
+      <div class="project-holder-decoration-2" loading="lazy">
+        <!-- :style="{ 'background-image': 'url(img/' + project.image + ')' }" -->
         <div class="project-holder" :class="project.titleClass">
           <div class="project-details-name-deco">
             <div class="project-details-name">{{ project.title }}</div>
@@ -61,25 +58,25 @@
             <div class="project-images-holder">
               <img
                 v-bind:src="'img/' + project.image"
-                class="project-details-image"
+                class="project-details-image project-details-image-1"
                 alt=""
                 loading="lazy"
               />
               <img
                 v-bind:src="'img/' + project.image2"
-                class="project-details-image-2"
+                class="project-details-image project-details-image-2"
                 alt=""
                 loading="lazy"
               />
               <img
                 v-bind:src="'img/' + project.image"
-                class="project-details-image-3"
+                class="project-details-image project-details-image-3"
                 alt=""
                 loading="lazy"
               />
               <img
                 v-bind:src="'img/' + project.image2"
-                class="project-details-image-4"
+                class="project-details-image project-details-image-4"
                 alt=""
                 loading="lazy"
               />
@@ -102,9 +99,9 @@ function imageUrl(image) {
 
 function toggleZoom(e) {
   if (!e.target.classList.contains("project-details-image-zoom-in")) {
-    window.addEventListener("click", removeZoomDocument);
+    e.target.classList.add("project-details-image-zoom-in");
     setTimeout(() => {
-      e.target.classList.add("project-details-image-zoom-in");
+      window.addEventListener("click", removeZoomDocument);
     }, "100");
   }
 }
@@ -112,14 +109,95 @@ function removeZoomDocument() {
   document.querySelectorAll(".project-details-image").forEach((node) => {
     if (node.classList.contains("project-details-image-zoom-in")) {
       node.classList.remove("project-details-image-zoom-in");
-      window.removeEventListener("click", removeZoomDocument);
+      // document.getElementById("zoom-view").parentNode.removeChild(document.getElementById("zoom-view"))
     }
+    window.removeEventListener("click", removeZoomDocument);
+    // Remove images from image list
+    document.querySelector(".zoom-view-list").childNodes.forEach((child) => {
+      child.remove();
+    });
+    document.getElementById("zoom-view").style.scale = "20%";
+    document.getElementById("zoom-view").style.opacity = "0";
+    setTimeout(() => {
+      document.getElementById("zoom-view").style.visibility = "hidden";
+    }, "300");
+    window.onscroll = () => {};
   });
+}
+
+function zoomImageMode(e) {
+  const ZoomView = document.getElementById("zoom-view");
+  document.getElementById("__nuxt").classList.add("stop-scrolling");
+  // document.querySelector('body').bind('touchmove', function(e){e.preventDefault()})
+  // document.body.style.overflow = "hidden";
+  const scrollPosition =
+    document.documentElement.scrollTop || document.body.scrollTop;
+  console.log(document.documentElement.scrollTop || document.body.scrollTop);
+  window.onscroll = () => {
+    window.scroll(0, scrollPosition);
+  };
+  // ZoomView.style.height = "90vh";
+  // ZoomView.style.width = "90vw";
+  // ZoomView.style.position = "fixed";
+  // ZoomView.style.top = "0";
+  // ZoomView.style.left = "0";
+  // ZoomView.style.zIndex = "99";
+  // ZoomView.style.backgroundRepeat = "no-repeat";
+  // ZoomView.style.backgroundPosition = "center";
+  // ZoomView.style.backgroundSize = "cover";
+  // ZoomView.style.cursor = "zoom-out"
+  // ZoomView.id = "zoom-view"
+  const imageNode = document.querySelector(".zoom-view-image");
+  imageNode.src = e.target.src;
+  ZoomView.style.visibility = "visible";
+  document.getElementById("__nuxt").insertAdjacentElement("afterend", ZoomView);
+  setTimeout(() => {
+    ZoomView.style.scale = "100%";
+    ZoomView.style.opacity = "1";
+  }, "1");
+
+  // Get images from document for the image list
+  const imageList = [];
+  e.target.parentNode.childNodes.forEach((child) => {
+    imageList.push(child.src);
+  });
+  console.log(imageList);
+
+  const ZoomList = document.querySelector(".zoom-view-list");
+  if (!ZoomList.hasChildNodes) {
+    imageList.forEach((image) => {
+      let imageNode = document.createElement("div");
+      imageNode.style.backgroundImage = `url(${image})`;
+      imageNode.style.width = "5rem";
+      imageNode.style.height = "5rem";
+      imageNode.style.backgroundSize = "contain";
+      imageNode.classList.add("zoom-view-list-image");
+      ZoomList.appendChild(imageNode);
+    });
+  }
+  console.log(e.target.src);
+}
+
+function disableScroll() {
+  // Get the current page scroll position
+  scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  (scrollLeft = window.pageXOffset || document.documentElement.scrollLeft),
+    // if any scroll is attempted, set this to the previous value
+    (window.onscroll = function () {
+      window.scrollTo(scrollLeft, scrollTop);
+    });
+}
+
+function enableScroll() {
+  window.onscroll = function () {};
 }
 
 onMounted(() => {
   document.querySelectorAll(".project-details-image").forEach((node) => {
     node.addEventListener("click", toggleZoom);
+  });
+  document.querySelectorAll(".project-details-image").forEach((node) => {
+    node.addEventListener("click", zoomImageMode);
   });
 });
 </script>

@@ -8,6 +8,15 @@
       <div class="projects-list pt-4 pb-4">
         <ProjectsProjectInfo />
       </div>
+      <div id="zoom-view">
+        <button class="zoom-view-go-exit">Exit</button>
+        <div class="zoom-view-images-container">
+          <!-- <div class="zoom-view-go-left"></div> -->
+          <img class="zoom-view-image">
+          <!-- <div class="zoom-view-go-right"></div> -->
+        </div>
+        <div class="zoom-view-list"></div>
+      </div>
     </div>
   </div>
 </template>
@@ -15,10 +24,11 @@
 <script setup></script>
 
 <style scoped>
+@import "~/assets/css/projects.css";
 
 .projects-container-deco {
   /* background-image: url(/public/img/background_objects.jpg); */
-  width: 75%;
+  width: 100%;
 }
 .projects-container {
   display: flex;
@@ -37,7 +47,7 @@
   width: 50%;
   height: 1rem;
   background: #1f94cf00;
-  border-top: 0.5rem dotted #0a9ae7;
+  border-top: 0.5rem double #0a9ae7;
   margin-top: 1rem;
   align-self: center;
 }

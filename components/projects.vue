@@ -9,7 +9,7 @@
         <ProjectsProjectInfo />
       </div>
       <div id="zoom-view">
-        <button class="zoom-view-go-exit">Exit</button>
+        <button class="zoom-view-go-exit">&times;</button>
         <div class="zoom-view-images-container">
           <!-- <div class="zoom-view-go-left"></div> -->
           <img class="zoom-view-image">

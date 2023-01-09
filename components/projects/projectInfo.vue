@@ -101,7 +101,7 @@ function toggleZoom(e) {
   if (!e.target.classList.contains("project-details-image-zoom-in")) {
     e.target.classList.add("project-details-image-zoom-in");
     setTimeout(() => {
-      window.addEventListener("click", removeZoomDocument);
+      document.querySelector(".zoom-view-go-exit").addEventListener("click", removeZoomDocument);
     }, "100");
   }
 }
@@ -111,7 +111,7 @@ function removeZoomDocument() {
       node.classList.remove("project-details-image-zoom-in");
       // document.getElementById("zoom-view").parentNode.removeChild(document.getElementById("zoom-view"))
     }
-    window.removeEventListener("click", removeZoomDocument);
+    document.querySelector(".zoom-view-go-exit").removeEventListener("click", removeZoomDocument);
     // Remove images from image list
     document.querySelector(".zoom-view-list").childNodes.forEach((child) => {
       child.remove();
@@ -127,7 +127,7 @@ function removeZoomDocument() {
 
 function zoomImageMode(e) {
   const ZoomView = document.getElementById("zoom-view");
-  document.getElementById("__nuxt").classList.add("stop-scrolling");
+  // document.getElementById("__nuxt").classList.add("stop-scrolling");
   // document.querySelector('body').bind('touchmove', function(e){e.preventDefault()})
   // document.body.style.overflow = "hidden";
   const scrollPosition =
@@ -149,6 +149,7 @@ function zoomImageMode(e) {
   // ZoomView.id = "zoom-view"
   const imageNode = document.querySelector(".zoom-view-image");
   imageNode.src = e.target.src;
+  imageNode.addEventListener("click", removeZoomDocument)
   ZoomView.style.visibility = "visible";
   document.getElementById("__nuxt").insertAdjacentElement("afterend", ZoomView);
   setTimeout(() => {
@@ -164,18 +165,26 @@ function zoomImageMode(e) {
   console.log(imageList);
 
   const ZoomList = document.querySelector(".zoom-view-list");
-  if (!ZoomList.hasChildNodes) {
+  // if (!ZoomList.hasChildNodes) {
     imageList.forEach((image) => {
-      let imageNode = document.createElement("div");
-      imageNode.style.backgroundImage = `url(${image})`;
-      imageNode.style.width = "5rem";
-      imageNode.style.height = "5rem";
+      let imageNode = document.createElement("img");
+      imageNode.src = image;
+      // imageNode.style.backgroundImage = `url(${image})`;
+      imageNode.style.width = "fit-content";
+      // imageNode.style.height = "100%";
       imageNode.style.backgroundSize = "contain";
-      imageNode.classList.add("zoom-view-list-image");
+      imageNode.style.backgroundRepeat = "no-repeat";
+      imageNode.style.cursor = "pointer";
+      imageNode.addEventListener("click", changeCurrentImageView);
       ZoomList.appendChild(imageNode);
+      imageNode.classList.add("zoom-view-list-image");
     });
-  }
+  // }
   console.log(e.target.src);
+}
+
+function changeCurrentImageView(e) {
+  document.querySelector(".zoom-view-image").src = e.target.src
 }
 
 function disableScroll() {

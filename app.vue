@@ -4,10 +4,10 @@
   <div class="main-container">
         <nav class="top-header">
           <div class="top-header-nav">
-            <h2 class="header title-header">Hi, I'm Neno</h2>
+            <h2 class="header title-header">Hi, I'm Nenad</h2>
             <h2 class="header-space-fill"></h2>
             <h2 class="header home" @click="FocusToElement">Home</h2>
-            <h2 class="header about" @click="FocusToElement">About Neno</h2>
+            <h2 class="header about" @click="FocusToElement">About Me</h2>
             <h2
               class="header projects projects-hover"
               @click="FocusToElement"

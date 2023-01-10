@@ -54,34 +54,51 @@
           </div>
           <div class="project-images-slider-container">
             <!-- <div class="project-images-left">&lt</div> -->
-
             <div class="project-images-holder">
               <img
-                v-bind:src="'img/' + project.image"
-                class="project-details-image project-details-image-1"
-                alt=""
-                loading="lazy"
-              />
-              <img
-                v-bind:src="'img/' + project.image2"
-                class="project-details-image project-details-image-2"
-                alt=""
-                loading="lazy"
-              />
-              <img
-                v-bind:src="'img/' + project.image"
-                class="project-details-image project-details-image-3"
-                alt=""
-                loading="lazy"
-              />
-              <img
-                v-bind:src="'img/' + project.image2"
-                class="project-details-image project-details-image-4"
-                alt=""
+                v-for="(image, index) in project.images"
+                :key="image"
+                v-bind:src="'img/' + image"
+                :class="`project-details-image project-details-image-${
+                  index + 1
+                }`"
+                :alt="image"
                 loading="lazy"
               />
             </div>
             <!-- <div class="project-images-right">></div> -->
+          </div>
+          <div class="images-box-decoration-container">
+            <div class="images-box-decoration box-1"></div>
+            <div class="images-box-decoration box-2"></div>
+            <div class="images-box-decoration box-3"></div>
+            <div class="images-box-decoration box-4"></div>
+            <div class="images-box-decoration box-5"></div>
+            <div class="images-box-decoration box-6"></div>
+            <div class="images-box-decoration box-7"></div>
+            <div class="images-box-decoration box-8"></div>
+            <div class="images-box-decoration box-9"></div>
+            <div class="images-box-decoration box-10"></div>
+          </div>
+          <div class="quad-box-decoration-container">
+            <div class="quad-box-decoration quad-box-1">
+              <div class="quad"></div>
+              <div class="quad"></div>
+              <div class="quad"></div>
+              <div class="quad"></div>
+            </div>
+            <div class="quad-box-decoration quad-box-2">
+              <div class="quad"></div>
+              <div class="quad"></div>
+              <div class="quad"></div>
+              <div class="quad"></div>
+            </div>
+            <div class="quad-box-decoration quad-box-3">
+              <div class="quad"></div>
+              <div class="quad"></div>
+              <div class="quad"></div>
+              <div class="quad"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -101,7 +118,9 @@ function toggleZoom(e) {
   if (!e.target.classList.contains("project-details-image-zoom-in")) {
     e.target.classList.add("project-details-image-zoom-in");
     setTimeout(() => {
-      document.querySelector(".zoom-view-go-exit").addEventListener("click", removeZoomDocument);
+      document
+        .querySelector(".zoom-view-go-exit")
+        .addEventListener("click", removeZoomDocument);
     }, "100");
   }
 }
@@ -111,7 +130,9 @@ function removeZoomDocument() {
       node.classList.remove("project-details-image-zoom-in");
       // document.getElementById("zoom-view").parentNode.removeChild(document.getElementById("zoom-view"))
     }
-    document.querySelector(".zoom-view-go-exit").removeEventListener("click", removeZoomDocument);
+    document
+      .querySelector(".zoom-view-go-exit")
+      .removeEventListener("click", removeZoomDocument);
     // Remove images from image list
     document.querySelector(".zoom-view-list").childNodes.forEach((child) => {
       child.remove();
@@ -149,7 +170,7 @@ function zoomImageMode(e) {
   // ZoomView.id = "zoom-view"
   const imageNode = document.querySelector(".zoom-view-image");
   imageNode.src = e.target.src;
-  imageNode.addEventListener("click", removeZoomDocument)
+  imageNode.addEventListener("click", removeZoomDocument);
   ZoomView.style.visibility = "visible";
   document.getElementById("__nuxt").insertAdjacentElement("afterend", ZoomView);
   setTimeout(() => {
@@ -160,31 +181,31 @@ function zoomImageMode(e) {
   // Get images from document for the image list
   const imageList = [];
   e.target.parentNode.childNodes.forEach((child) => {
-    imageList.push(child.src);
+    if (child.src) imageList.push(child.src);
   });
   console.log(imageList);
 
   const ZoomList = document.querySelector(".zoom-view-list");
   // if (!ZoomList.hasChildNodes) {
-    imageList.forEach((image) => {
-      let imageNode = document.createElement("img");
-      imageNode.src = image;
-      // imageNode.style.backgroundImage = `url(${image})`;
-      imageNode.style.width = "fit-content";
-      // imageNode.style.height = "100%";
-      imageNode.style.backgroundSize = "contain";
-      imageNode.style.backgroundRepeat = "no-repeat";
-      imageNode.style.cursor = "pointer";
-      imageNode.addEventListener("click", changeCurrentImageView);
-      ZoomList.appendChild(imageNode);
-      imageNode.classList.add("zoom-view-list-image");
-    });
+  imageList.forEach((image) => {
+    let imageNode = document.createElement("img");
+    imageNode.src = image;
+    // imageNode.style.backgroundImage = `url(${image})`;
+    imageNode.style.width = "fit-content";
+    // imageNode.style.height = "100%";
+    imageNode.style.backgroundSize = "contain";
+    imageNode.style.backgroundRepeat = "no-repeat";
+    imageNode.style.cursor = "pointer";
+    imageNode.addEventListener("click", changeCurrentImageView);
+    ZoomList.appendChild(imageNode);
+    imageNode.classList.add("zoom-view-list-image");
+  });
   // }
   console.log(e.target.src);
 }
 
 function changeCurrentImageView(e) {
-  document.querySelector(".zoom-view-image").src = e.target.src
+  document.querySelector(".zoom-view-image").src = e.target.src;
 }
 
 function disableScroll() {

@@ -2,7 +2,7 @@
   <div class="home-container">
     <h1 class="home-hello">Hello, my name is</h1>
     <div class="home-name-deco">
-      <h1 class="home-name">Neno</h1>
+      <h1 class="home-name">Nenad</h1>
     </div>
     <div class="home-introduction-deco">
       <h1 class="home-introduction">

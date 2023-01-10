@@ -2,7 +2,7 @@
   <div class="about-container-deco">
     <div class="about-container">
       <div class="about-header-deco">
-        <h2 class="about-header">About Neno</h2>  
+        <h2 class="about-header">About Me</h2>  
       </div>
       <div class="about-info">
         <img src="~/assets/images/profile_image.jpg" class="profile-image" />

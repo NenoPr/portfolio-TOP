@@ -1,9 +1,7 @@
 <template>
   <div class="projects-container-deco">
     <div class="projects-container">
-      <h1 class="header-projects">
-        Some Personal Projects I worked on!
-      </h1>
+      <h1 class="header-projects">Some Personal Projects I worked on!</h1>
       <div class="separator"></div>
       <div class="projects-list pt-4 pb-4">
         <ProjectsProjectInfo />
@@ -11,9 +9,9 @@
       <div id="zoom-view">
         <button class="zoom-view-go-exit">&times;</button>
         <div class="zoom-view-images-container">
-          <!-- <div class="zoom-view-go-left"></div> -->
-          <img class="zoom-view-image">
-          <!-- <div class="zoom-view-go-right"></div> -->
+          <div class="zoom-view-go-left zoom-view-go" v-on:click="zoomImageLeft">&lt;</div>
+          <img class="zoom-view-image" />
+          <div class="zoom-view-go-right zoom-view-go" v-on:click="zoomImageRight">&gt;</div>
         </div>
         <div class="zoom-view-list"></div>
       </div>
@@ -21,7 +19,47 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+function zoomImageLeft() {
+  const ImageView = document.querySelector(".zoom-view-image");
+  const ImageSelected = document.querySelector(".selected-image-zoom");
+
+  if (ImageSelected.previousElementSibling === null) {
+    ImageView.src = document.querySelector(".zoom-view-list").lastChild.src;
+    ImageSelected.classList.remove("selected-image-zoom")
+    document.querySelector(".zoom-view-list").lastChild.classList.add("selected-image-zoom");
+    swapCurrentImageView(ImageSelected,document.querySelector(".zoom-view-list").lastChild)
+  } else {
+    ImageView.src = ImageSelected.previousElementSibling.src;
+    ImageSelected.classList.remove("selected-image-zoom")
+    ImageSelected.previousElementSibling.classList.add("selected-image-zoom");
+    swapCurrentImageView(ImageSelected,ImageSelected.previousElementSibling)
+  }
+}
+
+function zoomImageRight() {
+  const ImageView = document.querySelector(".zoom-view-image");
+  const ImageSelected = document.querySelector(".selected-image-zoom");
+
+  if (ImageSelected.nextElementSibling === null) {
+    ImageView.src = document.querySelector(".zoom-view-list").firstChild.src;
+    ImageSelected.classList.remove("selected-image-zoom")
+    document.querySelector(".zoom-view-list").firstChild.classList.add("selected-image-zoom");
+    swapCurrentImageView(ImageSelected,document.querySelector(".zoom-view-list").firstChild)
+  } else {
+    ImageView.src = ImageSelected.nextElementSibling.src;
+    ImageSelected.classList.remove("selected-image-zoom")
+    ImageSelected.nextElementSibling.classList.add("selected-image-zoom");
+    swapCurrentImageView(ImageSelected,ImageSelected.nextElementSibling)
+  }
+}
+
+function swapCurrentImageView(nodeRemove, nodeAdd) {
+  nodeAdd.style.border = ".2rem solid #cd2b2b"
+  nodeRemove.style.border = ".2rem solid #cd2b2b00"
+}
+
+</script>
 
 <style scoped>
 @import "~/assets/css/projects.css";

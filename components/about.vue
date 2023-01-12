@@ -114,8 +114,10 @@
 <style scoped>
 
 .about-container-deco {
-  background-image: url(~/assets/images/profile_image.jpg);
+  background-image: url(~/public/img/background_profile.jpg);
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   border-radius: .5rem;
   width: 70%;
 }
@@ -131,7 +133,7 @@
   border-top: rgb(199, 114, 114) solid 0.5rem;
   text-align: center;
   padding: 0.5rem;
-  backdrop-filter: blur(.2rem);
+  /* backdrop-filter: blur(.2rem); */
   padding-bottom: 2rem;
 }
 

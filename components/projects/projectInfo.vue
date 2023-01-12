@@ -190,15 +190,20 @@ function zoomImageMode(e) {
   imageList.forEach((image) => {
     let imageNode = document.createElement("img");
     imageNode.src = image;
-    // imageNode.style.backgroundImage = `url(${image})`;
     imageNode.style.width = "fit-content";
-    // imageNode.style.height = "100%";
     imageNode.style.backgroundSize = "contain";
     imageNode.style.backgroundRepeat = "no-repeat";
     imageNode.style.cursor = "pointer";
     imageNode.addEventListener("click", changeCurrentImageView);
     ZoomList.appendChild(imageNode);
-    imageNode.classList.add("zoom-view-list-image");
+    imageNode.className = "zoom-view-list-image";
+    imageNode.style.border = ".2rem solid #cd2b2b00"
+    imageNode.style.borderRadius = ".25rem"
+    if (e.target.src === imageNode.src) {
+      imageNode.classList.toggle("selected-image-zoom");
+      imageNode.style.border = ".2rem solid #cd2b2b"
+      imageNode.style.borderRadius = ".25rem"
+    }
   });
   // }
   console.log(e.target.src);
@@ -206,6 +211,11 @@ function zoomImageMode(e) {
 
 function changeCurrentImageView(e) {
   document.querySelector(".zoom-view-image").src = e.target.src;
+  document.querySelector(".selected-image-zoom").style.border = ".2rem solid #cd2b2b00"
+  document.querySelector(".selected-image-zoom").style.borderRadius = ".25rem"
+  document.querySelector(".selected-image-zoom").classList.toggle("selected-image-zoom")
+  e.target.classList.toggle("selected-image-zoom");
+  e.target.style.border = ".2rem solid #cd2b2b"
 }
 
 function disableScroll() {

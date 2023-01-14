@@ -197,12 +197,13 @@ function zoomImageMode(e) {
     imageNode.addEventListener("click", changeCurrentImageView);
     ZoomList.appendChild(imageNode);
     imageNode.className = "zoom-view-list-image";
-    imageNode.style.border = ".2rem solid #cd2b2b00"
-    imageNode.style.borderRadius = ".25rem"
+    imageNode.style.border = ".2rem solid #cd2b2b00";
+    imageNode.style.borderRadius = ".25rem";
     if (e.target.src === imageNode.src) {
       imageNode.classList.toggle("selected-image-zoom");
-      imageNode.style.border = ".2rem solid #cd2b2b"
-      imageNode.style.borderRadius = ".25rem"
+      imageNode.style.border = ".2rem solid #8bdf25";
+      imageNode.style.borderRadius = ".25rem";
+      imageNode.style.outline = ".5rem solid #8bdf25";
     }
   });
   // }
@@ -211,11 +212,17 @@ function zoomImageMode(e) {
 
 function changeCurrentImageView(e) {
   document.querySelector(".zoom-view-image").src = e.target.src;
-  document.querySelector(".selected-image-zoom").style.border = ".2rem solid #cd2b2b00"
-  document.querySelector(".selected-image-zoom").style.borderRadius = ".25rem"
-  document.querySelector(".selected-image-zoom").classList.toggle("selected-image-zoom")
+  document.querySelector(".selected-image-zoom").style.border =
+    ".2rem solid #cd2b2b00";
+    document.querySelector(".selected-image-zoom").style.outline =
+    "";
+  document.querySelector(".selected-image-zoom").style.borderRadius = ".25rem";
+  document
+    .querySelector(".selected-image-zoom")
+    .classList.toggle("selected-image-zoom");
   e.target.classList.toggle("selected-image-zoom");
-  e.target.style.border = ".2rem solid #cd2b2b"
+  e.target.style.border = ".2rem solid #8bdf25";
+  e.target.style.outline = ".5rem solid #8bdf25";
 }
 
 function disableScroll() {

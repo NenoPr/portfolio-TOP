@@ -693,7 +693,7 @@ img {
   height: 15vh;
   gap: 1rem;
   padding: 0.2rem;
-  border: 0.1rem solid #0a9ae7;
+  border: 0.25rem solid #0a9ae7;
   width: fit-content;
   border-radius: .25rem;
 }

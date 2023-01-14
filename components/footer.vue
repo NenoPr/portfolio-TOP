@@ -16,7 +16,7 @@
     </a>
     </div>
     <div class="footer-sources">
-      <div>Sources from FreePik By:</div>
+      <div>Images from FreePik By:</div>
       <a
         href="https://www.freepik.com/free-vector/sphere-explosion-background_18454078.htm#page=2&query=geometric&position=4&from_view=keyword"
         >GarryKillian</a

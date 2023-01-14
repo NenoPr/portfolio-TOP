@@ -55,8 +55,10 @@ function zoomImageRight() {
 }
 
 function swapCurrentImageView(nodeRemove, nodeAdd) {
-  nodeAdd.style.border = ".2rem solid #cd2b2b"
+  nodeAdd.style.border = ".2rem solid #8bdf25"
+  nodeAdd.style.outline = ".5rem solid #8bdf25"
   nodeRemove.style.border = ".2rem solid #cd2b2b00"
+  nodeRemove.style.outline = ""
 }
 
 </script>

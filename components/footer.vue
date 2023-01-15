@@ -9,7 +9,7 @@
         rel="noreferrer noopener"
       >
       <img
-        src="src/img/GitHub-Mark-Light-32px.png"
+        src="public/img/GitHub-Mark-Light-32px.png"
         alt="GitHub Logo"
       />
       <p>Made by NenoPr</p>

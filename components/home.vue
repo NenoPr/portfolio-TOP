@@ -10,14 +10,6 @@
         Learning and Deep Learning
       </h1>
     </div>
-    <img src="" alt="" />
-    <!-- <div class="nuxt-link">
-      <NuxtLink
-        to="/projects"
-        class="font-bold hover:text-cyan-400 hover:underline"
-        >Click me to go to Projects Page!</NuxtLink
-      >
-    </div> -->
   </div>
 </template>
 

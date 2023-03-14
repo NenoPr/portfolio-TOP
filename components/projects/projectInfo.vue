@@ -58,7 +58,7 @@
               <img
                 v-for="(image, index) in project.images"
                 :key="image"
-                v-bind:src="'img/' + image"
+                v-bind:src="'img/thumbs/' + image"
                 :class="`project-details-image project-details-image-${
                   index + 1
                 }`"

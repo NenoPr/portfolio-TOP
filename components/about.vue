@@ -69,6 +69,13 @@
           </div>
           <!-- GAP -->
           <div class="about-tool-holder">
+            <div>jQuery</div>
+            <div class="about-tool-image">
+              <img src="../assets/images/logos/jQuery-logo.png" alt="" />
+            </div>
+          </div>
+          <!-- GAP -->
+          <div class="about-tool-holder">
             <div>Tailwind</div>
             <div class="about-tool-image">
               <img src="../assets/images/logos/tailwindcss-icon.svg" alt="" />

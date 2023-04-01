@@ -234,5 +234,35 @@
         "responsive-site-3.png",
         "responsive-site-5.png"
       ]
+  },
+  "seasonsMiniGame": {
+    "title": "Seasons Mini Game",
+    "titleClass": "seasons-game",
+    "desc": "A drag and drop game where the goal is to put words into matching boxes based around the Earths seasons.",
+    "tools": [
+      {
+        "tool": "HTML",
+        "image": "html-5-logo.png"
+      },
+      {
+        "tool": "CSS",
+        "image": "CSS3_logo.png"
+      },
+      {
+        "tool": "JavaScript",
+        "image": "JavaScript_logo.png"
+      },
+      {
+        "tool": "jQuery",
+        "image": "jQuery-logo.png"
+      }
+    ],
+    "webLink": "",
+    "images": [
+      "memory-card-1.png",
+      "memory-card-2.png",
+      "memory-card-3.png",
+      "memory-card-4.png"
+    ]
   }
 }

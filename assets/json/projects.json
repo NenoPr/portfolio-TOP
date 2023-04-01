@@ -235,10 +235,10 @@
         "responsive-site-5.png"
       ]
   },
-  "seasonsMiniGame": {
-    "title": "Seasons Mini Game",
-    "titleClass": "seasons-game",
-    "desc": "A drag and drop game where the goal is to put words into matching boxes based around the Earths seasons.",
+  "seasonsAndGameIndex": {
+    "title": "Seasons & Game Index",
+    "titleClass": "seasonsGameIndex-game",
+    "desc": "Seasons is a drag and drop mini-game where the goal is to put words into matching boxes based around the Earths seasons. The GameIndex is a search based project where you can search for games based by name, genre and style.",
     "tools": [
       {
         "tool": "HTML",
@@ -259,10 +259,10 @@
     ],
     "webLink": "",
     "images": [
-      "memory-card-1.png",
-      "memory-card-2.png",
-      "memory-card-3.png",
-      "memory-card-4.png"
+      "seasonsAndGameIndex-1.png",
+      "seasonsAndGameIndex-2.png",
+      "seasonsAndGameIndex-3.png",
+      "seasonsAndGameIndex-4.png"
     ]
   }
 }

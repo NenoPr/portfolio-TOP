@@ -15,7 +15,7 @@
           <div class="project-details-holder">
             <div class="project-info-holder-decoration">
               <div class="project-info-holder">
-                <div class="font-bold text-xl">Description:</div>
+                <div class="font-bold text-3xl">Description:</div>
                 <p class="project-details-description">
                   {{ project.desc }}
                 </p>
@@ -49,7 +49,7 @@
               target="_blank"
               rel="noreferrer noopener"
               class="tryit-link"
-              >PROJECT LINK</a
+              >CLICK TO TEST OUT THE PROJECT</a
             >
           </div>
           <div class="project-images-slider-container">
@@ -146,6 +146,13 @@ function removeZoomDocument() {
   });
 }
 
+function turnPathToHighResPic(path) {
+  let node = path.slice(0, path.lastIndexOf("/")) + "/highres/"
+  let imageName = path.slice(path.lastIndexOf("/") + 1)
+  node = node + imageName.slice(0, -4) + "-highres" + path.substr(-4);
+  return node
+}
+
 function zoomImageMode(e) {
   const ZoomView = document.getElementById("zoom-view");
   // document.getElementById("__nuxt").classList.add("stop-scrolling");
@@ -169,7 +176,9 @@ function zoomImageMode(e) {
   // ZoomView.style.cursor = "zoom-out"
   // ZoomView.id = "zoom-view"
   const imageNode = document.querySelector(".zoom-view-image");
-  imageNode.src = e.target.src;
+  // Change image path to high res version
+  imageNode.src = turnPathToHighResPic(e.target.src)
+
   imageNode.addEventListener("click", removeZoomDocument);
   ZoomView.style.visibility = "visible";
   document.getElementById("__nuxt").insertAdjacentElement("afterend", ZoomView);
@@ -189,7 +198,9 @@ function zoomImageMode(e) {
   // if (!ZoomList.hasChildNodes) {
   imageList.forEach((image) => {
     let imageNode = document.createElement("img");
-    imageNode.src = image;
+    console.log(image, imageNode.src)
+    imageNode.src = turnPathToHighResPic(image)
+    console.log(imageNode.src)
     imageNode.style.width = "fit-content";
     imageNode.style.backgroundSize = "contain";
     imageNode.style.backgroundRepeat = "no-repeat";
@@ -199,7 +210,7 @@ function zoomImageMode(e) {
     imageNode.className = "zoom-view-list-image";
     imageNode.style.border = ".2rem solid #cd2b2b00";
     imageNode.style.borderRadius = ".25rem";
-    if (e.target.src === imageNode.src) {
+    if (e.target.src === image) {
       imageNode.classList.toggle("selected-image-zoom");
       imageNode.style.border = ".2rem solid #8bdf25";
       imageNode.style.borderRadius = ".25rem";

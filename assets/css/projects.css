@@ -174,6 +174,7 @@ img {
   position: relative;
   top: 0rem;
   right: 1.5rem;
+  width: 100%;
 }
 
 .project-info-holder-decoration {
@@ -181,10 +182,11 @@ img {
   border-radius: 0.5rem;
   padding: 1rem;
   position: relative;
-  height: 90%;
-  max-width: 70%;
+  height: fit-content;
+  max-width: 500px;
   justify-self: center;
   align-self: center;
+  width: fit-content;
 }
 
 .project-details-name {
@@ -219,7 +221,7 @@ img {
 .project-details-description {
   text-align: left;
   align-self: center;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .project-tools-holder-deco {
@@ -299,7 +301,7 @@ img {
   padding: 0.5rem;
   /* padding-left: 1rem; */
   padding-right: 0rem;
-  background-color: #0b131750;
+  background-color: #ffffff;
   border-radius: 0.5rem;
   width: fit-content;
   align-self: center;
@@ -316,7 +318,7 @@ img {
     rgb(206, 149, 17),
     rgb(13, 113, 200)
   ); */
-  padding: 0.5rem;
+  padding: 1rem;
   border: 0.2rem solid #ffffff;
   border-radius: 0.5rem;
   font-weight: bold;
@@ -324,7 +326,7 @@ img {
   width: fit-content;
   align-self: center;
   background-size: 500%;
-  background-color: #0b1317;
+  background-color: #0a58d6;
   position: relative;
   top: 1rem;
   /* right: 1.5rem; */
@@ -335,9 +337,10 @@ img {
 .tryit-link:hover {
   /* animation: buttonPulse 0.5s ease-in-out infinite alternate,
     linkColorChange 3s infinite alternate; */
-  background-color: white;
-  color: #000000;
-  border-color: #000000;
+  /* background-color: white; */
+  color: #ffffff;
+  background-color: #0b1317;
+  /* border-color: #000000; */
 }
 
 .tryit-link:active {

@@ -121,7 +121,7 @@
 <style scoped>
 
 .about-container-deco {
-  background-image: url(~/public/img/background_profile.jpg);
+  /* background-image: url(~/public/img/rain.jpg); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

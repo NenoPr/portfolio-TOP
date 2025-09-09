@@ -13,11 +13,11 @@ A portfolio website containing some of my projects with links to them.
 ## 📸 Screenshots
 
 <div style="display: flex; flex-direction: column; align-content: center; align-items: center">
-	<img src="./images/image3.png">
 	<img src="./images/image1.png">
 	<img src="./images/image2.png">
+	<img src="./images/image3.png">
 </div>
 
-## 🔗 Live Demo
+## 🔗 Live Site
 
-[Demo Link](https://portfolio-top.vercel.app/)
+[Portfolio](https://portfolio-top.vercel.app/)

@@ -264,5 +264,47 @@
       "seasonsAndGameIndex-3.png",
       "seasonsAndGameIndex-4.png"
     ]
+  },
+  "studyBuddy": {
+    "title": "StudyBuddy",
+    "titleClass": "studyBuddy-game",
+    "desc": "StudyBuddy is an AI powered note manager. Its designed to help you study with the help of AI powered features like summarizes and quizzes. You can manage your notes by editing, deleting and putting them in groups for easier management.",
+    "tools": [
+      {
+        "tool": "HTML",
+        "image": "html-5-logo.png"
+      },
+      {
+        "tool": "CSS",
+        "image": "CSS3_logo.png"
+      },
+      {
+        "tool": "JavaScript",
+        "image": "JavaScript_logo.png"
+      },
+      {
+        "tool": "React",
+        "image": "React-logo.png"
+      },
+      {
+        "tool": "Node.js",
+        "image": "node-js-logo.png"
+      },
+      {
+        "tool": "Express",
+        "image": "express-logo.png"
+      },
+      {
+        "tool": "Postgresql",
+        "image": "postgresql-logo.png"
+      }
+    ],
+    "webLink": "https://github.com/NenoPr/AI_Study_Buddy",
+    "images": [
+      "studyBuddy-1.png",
+      "studyBuddy-2.png",
+      "studyBuddy-3.png",
+      "studyBuddy-4.png"
+    ]
   }
 }

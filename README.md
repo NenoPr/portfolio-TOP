@@ -1,42 +1,23 @@
-# Nuxt 3 Minimal Starter
+# Portfolio Website
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## 📌 Overview
 
-## Setup
+A portfolio website containing some of my projects with links to them.
 
-Make sure to install the dependencies:
+## 🛠️ Techs used in various projects
 
-```bash
-# yarn
-yarn install
+- Frontend: React, Tailwind, Nuxt, Vue, JQuery
+- Backend: Node.js, Express
+- Database: PostgreSQL, MongoDB
 
-# npm
-npm install
+## 📸 Screenshots
 
-# pnpm
-pnpm install --shamefully-hoist
-```
+<div style="display: flex; flex-direction: column; align-content: center; align-items: center">
+	<img src="./images/image3.png">
+	<img src="./images/image1.png">
+	<img src="./images/image2.png">
+</div>
 
-## Development Server
+## 🔗 Live Demo
 
-Start the development server on http://localhost:3000
-
-```bash
-npm run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+[Demo Link](https://portfolio-top.vercel.app/)

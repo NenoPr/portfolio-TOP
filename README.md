@@ -20,4 +20,4 @@ A portfolio website containing some of my projects with links to them.
 
 ## 🔗 Live Site
 
-[Portfolio](https://portfolio-top.vercel.app/)
+[Portfolio Link](https://portfolio-top.vercel.app/)

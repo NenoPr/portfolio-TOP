@@ -85,21 +85,21 @@
           <div class="about-tool-holder">
             <div>Node.js</div>
             <div class="about-tool-image">
-              <img src="../assets/images/logos/node-js-icon.svg" alt="" />
+              <img src="../assets/images/logos/node-js-icon.png" alt="" />
             </div>
           </div>
           <!-- GAP -->
           <div class="about-tool-holder">
             <div>Express</div>
             <div class="about-tool-image">
-              <img src="../assets/images/logos/express-icon.svg" alt="" />
+              <img src="../assets/images/logos/express-icon.png" alt="" />
             </div>
           </div>
           <!-- GAP -->
           <div class="about-tool-holder">
             <div>Postgresql</div>
             <div class="about-tool-image">
-              <img src="../assets/images/logos/postgresql-icon.svg" alt="" />
+              <img src="../assets/images/logos/postgresql-icon.png" alt="" />
             </div>
           </div>
           <!-- GAP -->

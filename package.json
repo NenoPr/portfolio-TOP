@@ -10,13 +10,17 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
-    "nuxt": "3.0.0",
+    "nuxt": "^4.1.1",
     "postcss": "^8.4.19",
     "push-dir": "^0.4.1",
     "tailwindcss": "^3.2.4"
   },
   "dependencies": {
+    "@nuxt/nitro": "^0.10.0",
     "sass": "^1.56.1",
     "sass-loader": "^13.2.0"
+  },
+  "engines": {
+    "node": "22.x"
   }
 }

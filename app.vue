@@ -245,6 +245,8 @@ onMounted(() => {
   display: flex;
   flex-direction: column;
   align-items: center;
+  align-self: center;
+  align-content: center;
   gap: 2rem;
   min-height: 100vh;
   background-color: #0b1317;
@@ -257,8 +259,8 @@ onMounted(() => {
   grid-template-rows: 1fr auto;
   grid-template-columns: 1fr;
   justify-content: center;
-  width: 100%;
-  padding: 1rem;
+  width: 100vw;
+  padding-top: 1rem;
   position: sticky;
   position: -webkit-sticky;
   position: fixed;
@@ -302,6 +304,7 @@ onMounted(() => {
   top: 0px;
   gap: 1rem;
   margin-top: 0;
+  margin-bottom: .5rem;
   font-weight: bold;
   opacity: 0;
   height: 0px;

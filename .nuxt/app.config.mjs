@@ -1,8 +1,21 @@
 
-import { defuFn } from '/home/neno/WebProjects/The Odin Project Projects/portfolio-TOP/node_modules/defu/dist/defu.mjs'
+import { defuFn } from 'defu'
 
-const inlineConfig = {}
+const inlineConfig = {
+  "nuxt": {}
+}
+
+/** client **/
+import { _replaceAppConfig } from '#app/config'
+
+// Vite - webpack is handled directly in #app/config
+if (import.meta.dev && !import.meta.nitro && import.meta.hot) {
+  import.meta.hot.accept((newModule) => {
+    _replaceAppConfig(newModule.default)
+  })
+}
+/** client-end **/
 
 
 
-export default defuFn(inlineConfig)
+export default /*@__PURE__*/ defuFn(inlineConfig)

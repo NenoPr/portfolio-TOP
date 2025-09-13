@@ -2,7 +2,7 @@
   "memoryGame": {
     "title": "Memory Game",
     "titleClass": "memory-game",
-    "desc": "A memory based game where the goal is to click every unique image once. Clicking the same image twice will reset the game score and the game will reset. Clicking every unique image in succession will result in a Win!",
+    "desc": "A memory based game where the goal is to click every unique image once. Clicking the same image twice will reset the game score and the game will end. Clicking every unique image once in succession will result in a Win!",
     "tools": [
       {
         "tool": "HTML",
@@ -22,6 +22,7 @@
       }
     ],
     "webLink": "https://nenopr.github.io/memory-card-OdinProject/",
+    "githubLink": "https://github.com/NenoPr/memory-card-OdinProject",
     "images": [
       "memory-card-1.png",
       "memory-card-2.png",
@@ -52,6 +53,7 @@
       }
     ],
     "webLink": "https://nenopr.github.io/shopping-cart-OdinProject/#/",
+    "githubLink": "https://github.com/NenoPr/shopping-cart-OdinProject",
     "images": [
         "shopping-cart-1.png",
         "shopping-cart-2.png",
@@ -78,6 +80,7 @@
       }
     ],
     "webLink": "https://nenopr.github.io/battleship-TheOdinProject/",
+    "githubLink": "https://github.com/NenoPr/battleship-TheOdinProject",
     "images": [
         "battleship-4.png",
         "battleship-3.png",
@@ -104,6 +107,7 @@
       }
     ],
     "webLink": "https://nenopr.github.io/weather-app-TheOdinProject/",
+    "githubLink": "https://github.com/NenoPr/weather-app-TheOdinProject",
     "images": [
         "weather-app-4.png",
         "weather-app-2.png",
@@ -138,6 +142,7 @@
       }
     ],
     "webLink": "https://nenopr.github.io/find-me-image-tagging-game/",
+    "githubLink": "https://github.com/NenoPr/find-me-image-tagging-game",
     "images": [
         "find-me-image-tagging-game-5.png",
         "find-me-image-tagging-game-1.png",
@@ -168,6 +173,7 @@
       }
     ],
     "webLink": "https://nenopr.github.io/cv-project-TheOdinProject/",
+    "githubLink": "https://github.com/NenoPr/cv-project-TheOdinProject",
     "images": [
         "cv-project-1.png",
         "cv-project-2.png",
@@ -194,6 +200,7 @@
       }
     ],
     "webLink": "https://nenopr.github.io/tic-tac-toe-project-The-Odin-Project/",
+    "githubLink": "https://github.com/NenoPr/tic-tac-toe-project-The-Odin-Project",
     "images": [
         "tic-tac-toe-1.png",
         "tic-tac-toe-2.png",
@@ -228,6 +235,7 @@
       }
     ],
     "webLink": "https://lloyds-verdas-frontend-assigment.vercel.app/en",
+    "githubLink": "https://github.com/NenoPr/lloyds-verdas-frontend-assigment",
     "images": [
         "responsive-site-1.png",
         "responsive-site-2.png",
@@ -258,6 +266,7 @@
       }
     ],
     "webLink": "https://nenopr.github.io/exordiumGames_frontEndAssigment/",
+    "githubLink": "https://github.com/NenoPr/exordiumGames_frontEndAssigment",
     "images": [
       "seasonsAndGameIndex-1.png",
       "seasonsAndGameIndex-2.png",
@@ -299,7 +308,8 @@
         "image": "postgresql-logo.png"
       }
     ],
-    "webLink": "https://github.com/NenoPr/AI_Study_Buddy",
+    "webLink": "https://ai-study-buddy-silk.vercel.app",
+    "githubLink": "https://github.com/NenoPr/AI_Study_Buddy",
     "images": [
       "studyBuddy-1.png",
       "studyBuddy-2.png",

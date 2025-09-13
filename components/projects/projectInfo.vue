@@ -49,7 +49,14 @@
               target="_blank"
               rel="noreferrer noopener"
               class="tryit-link"
-              >CLICK TO TEST OUT THE PROJECT</a
+              >Demo</a
+            >
+            <a
+              :href="`${project.githubLink}`"
+              target="_blank"
+              rel="noreferrer noopener"
+              class="tryit-link"
+              >Github</a
             >
           </div>
           <div class="project-images-slider-container">
@@ -147,10 +154,10 @@ function removeZoomDocument() {
 }
 
 function turnPathToHighResPic(path) {
-  let node = path.slice(0, path.lastIndexOf("/")) + "/highres/"
-  let imageName = path.slice(path.lastIndexOf("/") + 1)
+  let node = path.slice(0, path.lastIndexOf("/")) + "/highres/";
+  let imageName = path.slice(path.lastIndexOf("/") + 1);
   node = node + imageName.slice(0, -4) + "-highres" + path.substr(-4);
-  return node
+  return node;
 }
 
 function zoomImageMode(e) {
@@ -177,7 +184,7 @@ function zoomImageMode(e) {
   // ZoomView.id = "zoom-view"
   const imageNode = document.querySelector(".zoom-view-image");
   // Change image path to high res version
-  imageNode.src = turnPathToHighResPic(e.target.src)
+  imageNode.src = turnPathToHighResPic(e.target.src);
 
   imageNode.addEventListener("click", removeZoomDocument);
   ZoomView.style.visibility = "visible";
@@ -198,23 +205,14 @@ function zoomImageMode(e) {
   // if (!ZoomList.hasChildNodes) {
   imageList.forEach((image) => {
     let imageNode = document.createElement("img");
-    console.log(image, imageNode.src)
-    imageNode.src = turnPathToHighResPic(image)
-    console.log(imageNode.src)
-    imageNode.style.width = "fit-content";
-    imageNode.style.backgroundSize = "contain";
-    imageNode.style.backgroundRepeat = "no-repeat";
-    imageNode.style.cursor = "pointer";
+    console.log(image, imageNode.src);
+    imageNode.src = turnPathToHighResPic(image);
+    console.log(imageNode.src);
     imageNode.addEventListener("click", changeCurrentImageView);
     ZoomList.appendChild(imageNode);
     imageNode.className = "zoom-view-list-image";
-    imageNode.style.border = ".2rem solid #cd2b2b00";
-    imageNode.style.borderRadius = ".25rem";
     if (e.target.src === image) {
       imageNode.classList.toggle("selected-image-zoom");
-      imageNode.style.border = ".2rem solid #8bdf25";
-      imageNode.style.borderRadius = ".25rem";
-      imageNode.style.outline = ".5rem solid #8bdf25";
     }
   });
   // }
@@ -223,17 +221,10 @@ function zoomImageMode(e) {
 
 function changeCurrentImageView(e) {
   document.querySelector(".zoom-view-image").src = e.target.src;
-  document.querySelector(".selected-image-zoom").style.border =
-    ".2rem solid #cd2b2b00";
-    document.querySelector(".selected-image-zoom").style.outline =
-    "";
-  document.querySelector(".selected-image-zoom").style.borderRadius = ".25rem";
   document
     .querySelector(".selected-image-zoom")
     .classList.toggle("selected-image-zoom");
   e.target.classList.toggle("selected-image-zoom");
-  e.target.style.border = ".2rem solid #8bdf25";
-  e.target.style.outline = ".5rem solid #8bdf25";
 }
 
 function disableScroll() {

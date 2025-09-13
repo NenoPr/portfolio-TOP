@@ -6,8 +6,7 @@
     </div>
     <div class="home-introduction-deco">
       <h1 class="home-introduction">
-        I am a self thought programer studying Web Developement, Machine
-        Learning and Deep Learning
+        I am a self thought programer studying Web Development and AI.
       </h1>
     </div>
   </div>

@@ -2,15 +2,14 @@
   <div class="about-container-deco">
     <div class="about-container">
       <div class="about-header-deco">
-        <h2 class="about-header">About Me</h2>  
+        <h2 class="about-header">About Me</h2>
       </div>
       <div class="about-info">
         <img src="~/assets/images/profile_image.jpg" class="profile-image" />
         <div class="profile-desc-deco">
           <p class="profile-desc">
-            I am a hobbyist programmer, working on making it professional. My main
-            areas of interest are Web development and AI (Machine Learning/Deep
-            Learning).
+            I am a hobbyist programmer, working on making it professional. My
+            main areas of interest are Web development and AI.
           </p>
         </div>
       </div>
@@ -140,13 +139,12 @@
 <script setup></script>
 
 <style scoped>
-
 .about-container-deco {
   /* background-image: url(~/public/img/rain.jpg); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   width: 70%;
 }
 
@@ -169,7 +167,7 @@
   grid-row: 1;
   grid-column: 1 / 3;
   background-color: #0b131750;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   width: calc(50%);
   justify-self: center;
   position: relative;
@@ -180,7 +178,7 @@
   font-weight: bold;
   font-size: 2rem;
   background-color: #0b1317;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   position: relative;
   top: 1rem;
   right: 1rem;
@@ -201,15 +199,16 @@
   object-position: 100%;
   width: 15rem;
   height: 15rem;
-  border: .2rem solid #0b131750;
+  border: 0.2rem solid #0b131750;
 }
 
 .profile-desc-deco {
   background-color: #0b131750;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   position: relative;
   width: 90%;
   height: max-content;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .profile-desc {
@@ -217,7 +216,7 @@
   background-color: #0b1317;
   font-size: 1.25rem;
   padding: 1rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   position: relative;
   top: 1rem;
   right: 1rem;
@@ -228,8 +227,8 @@
   flex-direction: column;
   align-items: center;
   background-color: #0b131750;
-  border-radius: .5rem;
-  padding: .5rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
   padding-top: 1rem;
 }
 
@@ -290,8 +289,8 @@
   justify-content: center;
   align-items: center;
   background-color: #ffffff;
-  padding: .5rem;
-  border-radius: .5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
   width: 100%;
   flex-basis: 90%;
   width: 5rem;
